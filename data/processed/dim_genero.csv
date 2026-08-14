@@ -1,0 +1,36 @@
+genero_id,nome_genero,tipo_classificacao
+2,Adventure,genre
+46,Award Winning,genre
+8,Drama,genre
+10,Fantasy,genre
+27,Shounen,demographic
+41,Suspense,genre
+62,Isekai,theme
+40,Psychological,theme
+78,Time Travel,theme
+1,Action,genre
+38,Military,theme
+7,Mystery,genre
+37,Supernatural,genre
+13,Historical,theme
+3,Racing,theme
+42,Seinen,demographic
+24,Sci-Fi,genre
+58,Gore,theme
+82,Urban Fantasy,theme
+76,Survival,theme
+4,Comedy,genre
+57,Gag Humor,theme
+20,Parody,theme
+21,Samurai,theme
+50,Adult Cast,theme
+29,Space,theme
+9,Ecchi,genre
+72,Reincarnation,theme
+22,Romance,genre
+23,School,theme
+25,Shoujo,demographic
+18,Mecha,theme
+31,Super Power,theme
+67,Medical,theme
+11,Strategy Game,theme

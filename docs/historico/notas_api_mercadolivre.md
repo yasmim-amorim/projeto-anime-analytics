@@ -15,18 +15,45 @@ Hipótese mais provável: o Mercado Livre aplica um `PolicyAgent` anti-abuso que
 tráfego vindo de IPs de datacenter/nuvem para os endpoints `/sites/{site}/*`, mas libera
 endpoints de leitura simples como `/categories/{id}`.
 
-**Próximo passo (ação da usuária, fora deste ambiente):** rodar `src/explorar_api.py`
-na sua própria máquina, com rede doméstica no Brasil, e confirmar se `/sites/MLB/search`
-funciona por lá. Dois cenários:
+**Confirmado em 2026-08-14:** rodamos `src/explorar_api.py` também na máquina local
+(rede doméstica, Brasil) e `/sites/MLB/search` retornou o mesmo 403. Ou seja, **não é
+bloqueio por IP de datacenter/nuvem** — é uma restrição do próprio endpoint, que hoje
+em dia exige autenticação (OAuth) mesmo para buscas simples. `/categories/{id}` segue
+público e funcionando normalmente.
 
-1. **Funciona localmente** → confirma que era bloqueio por IP de nuvem; a coleta (Etapa 2)
-   deve ser feita sempre a partir de uma máquina local/residencial, não de um servidor
-   em nuvem genérico.
-2. **Também falha localmente** → o Mercado Livre pode ter restringido esse endpoint para
-   exigir autenticação (OAuth). Nesse caso, o próximo passo é criar uma aplicação em
-   [developers.mercadolivre.com.br](https://developers.mercadolivre.com.br) para obter
-   `client_id`/`client_secret` e gerar um `access_token`, e passar
-   `Authorization: Bearer <token>` nas chamadas.
+**Atualização 2026-08-14:** app criado no DevCenter, fluxo OAuth completo (client_id,
+client_secret, authorization code → access_token + refresh_token, tudo salvo no
+`.env`). Mesmo com `Authorization: Bearer <token>` válido, `/sites/MLB/search`
+continua retornando o mesmo 403 `PA_UNAUTHORIZED_RESULT_FROM_POLICIES`.
+
+Causa confirmada na documentação oficial do Mercado Livre
+(`developers.mercadolivre.com.br/pt_br/erro-403`), na lista de validações para erro 403:
+
+> "Validar dados dos usuários: o usuário deve ter concluído o processo de validação
+> de dados."
+
+Isso bate com a tela de verificação de identidade (Mercado Pago Shield / biometria
+facial) que apareceu durante o cadastro do app. Descartamos a hipótese de bloqueio por
+faixa de IP: o recurso de allowlist de IP (`Gerenciar IPs de um aplicativo`) é exclusivo
+para "integradores whitelisted", não se aplica a apps comuns como o nosso.
+
+**Atualização 2026-08-14 (parte 2):** usuária completou a verificação de identidade no
+Mercado Pago. `GET /users/me` passou a responder 200 normalmente (conta ativa, email
+confirmado, sem restrições pendentes). Mesmo assim, `/sites/MLB/search`,
+`/items/{id}` e `/highlights/MLB/category/{id}` continuam retornando o mesmo
+`PA_UNAUTHORIZED_RESULT_FROM_POLICIES`.
+
+**Conclusão:** o bloqueio não é (ou não é mais) sobre a conta — é sobre a categoria de
+endpoints de catálogo/busca de produtos como um todo, que parece exigir aprovação
+como parceiro (ver "Developer Partner Program" no rodapé de
+developers.mercadolivre.com.br) e não está disponível apenas criando um app comum
+no DevCenter. `/categories/{id}` e `/users/me` (endpoints "genéricos") continuam
+públicos e funcionando.
+
+**Decisão tomada:** seguir o projeto com um dataset de exemplo realista (celulares,
+informática, games), documentando essa limitação de acesso à API como um achado
+técnico real do projeto. Se a aprovação de parceiro for obtida no futuro, os dados de
+exemplo são substituídos pelos reais sem redesenhar o pipeline.
 
 ## Categorias confirmadas (via `/categories/{id}`, que funciona sem restrição)
 
