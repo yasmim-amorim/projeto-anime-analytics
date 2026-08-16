@@ -18,9 +18,9 @@ Como nota, popularidade e engajamento do público se comportam entre gêneros e 
 
 ## Status
 
-- ✅ Coleta (`src/coletar_anilist.py`) e tratamento (`src/tratar_dados.py`) completos: 5.000 animes processados em `data/processed/` (teto de paginação da API AniList).
-- ✅ Schema (`sql/ddl.sql`) e camada analítica em SQL (views + window functions em `sql/queries_analiticas.sql`) implementados.
-- 🚧 Carga da coleta completa no banco (`src/carga_sql.py`) e construção do dashboard no Power BI (guia de referência já escrito em [`docs/guia_powerbi.md`](docs/guia_powerbi.md)).
+- ✅ Coleta (`src/coletar_anilist.py`, 5.000 animes — teto de paginação da API AniList) e tratamento (`src/tratar_dados.py`, com filtro de conteúdo adulto) completos: 4.378 animes, 376 estúdios, 17 gêneros em `data/processed/`.
+- ✅ Schema (`sql/ddl.sql`), camada analítica em SQL (views + window functions em `sql/queries_analiticas.sql`) e carga no PostgreSQL (`src/carga_sql.py`) completos.
+- 🚧 Construção do dashboard no Power BI (guia de referência já escrito em [`docs/guia_powerbi.md`](docs/guia_powerbi.md)).
 
 ## Como rodar
 

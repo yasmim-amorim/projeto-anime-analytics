@@ -3,18 +3,16 @@ genero_id,nome_genero
 2,Adventure
 3,Comedy
 4,Drama
-5,Ecchi
-6,Fantasy
-7,Hentai
-8,Horror
-9,Mahou Shoujo
-10,Mecha
-11,Music
-12,Mystery
-13,Psychological
-14,Romance
-15,Sci-Fi
-16,Slice of Life
-17,Sports
-18,Supernatural
-19,Thriller
+5,Fantasy
+6,Horror
+7,Mahou Shoujo
+8,Mecha
+9,Music
+10,Mystery
+11,Psychological
+12,Romance
+13,Sci-Fi
+14,Slice of Life
+15,Sports
+16,Supernatural
+17,Thriller

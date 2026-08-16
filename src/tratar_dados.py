@@ -2,8 +2,10 @@
 Tratamento dos dados brutos coletados da API AniList.
 
 Lê todos os anime_pagina_*.json da coleta mais recente em data/raw/anilist/<data>/,
-normaliza os campos aninhados (genres, studios, rankings, stats) e gera os
-DataFrames finais (um por tabela do schema), salvando como CSV em data/processed/.
+normaliza os campos aninhados (genres, studios, rankings, stats), remove
+conteúdo adulto (Hentai, Ecchi, isAdult=true — fora do escopo do portfólio) e
+gera os DataFrames finais (um por tabela do schema), salvando como CSV em
+data/processed/.
 """
 
 import json
@@ -30,6 +32,18 @@ def carregar_animes_brutos(pasta_coleta):
             pagina = json.load(f)
         animes.extend(pagina["media"])
     return animes
+
+
+GENEROS_EXCLUIDOS = {"Hentai", "Ecchi"}
+
+
+def filtrar_conteudo_adulto(animes):
+    """Remove animes classificados como Hentai/Ecchi ou isAdult=true (fora do escopo do portfólio)."""
+    return [
+        a for a in animes
+        if not a.get("isAdult")
+        and not (set(a.get("genres") or []) & GENEROS_EXCLUIDOS)
+    ]
 
 
 def parsear_data(data_parcial):
@@ -140,6 +154,9 @@ def main():
 
     animes = carregar_animes_brutos(pasta_coleta)
     print(f"{len(animes)} animes carregados (antes de deduplicar)")
+
+    animes = filtrar_conteudo_adulto(animes)
+    print(f"{len(animes)} animes após remover Hentai/Ecchi/Adult")
 
     df_dim_anime = construir_dim_anime(animes)
     df_dim_genero, df_ponte_anime_genero = construir_genero_tabelas(animes)

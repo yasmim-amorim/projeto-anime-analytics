@@ -44,7 +44,8 @@ Requer `.env` local com `DATABASE_URL` (ver `.env.example`) e banco `anime_analy
 
 ## Coisas a saber antes de mexer
 
-- **Origem dos campos de métrica**: `score` vem de `averageScore` (0-100) da AniList dividido por 10, pra escala 0-10. `scored_by` é calculado somando os buckets de `stats.scoreDistribution` (a API não expõe contagem direta de avaliações). `rank`/`popularity` vêm de `rankings[]` filtrando `type: RATED`/`type: POPULAR` com `allTime: true` (nem todo anime tem os dois, fica `NULL`). `members` é o campo `popularity` da AniList (contagem de usuários com o anime na lista). `favorites` é `favourites`, direto. `classificacao_etaria` vira `'Adult'` quando `isAdult = true`, senão `NULL`. Detalhes completos em `plano-de-acao-projeto-anime.md`.
+- **Origem dos campos de métrica**: `score` vem de `averageScore` (0-100) da AniList dividido por 10, pra escala 0-10. `scored_by` é calculado somando os buckets de `stats.scoreDistribution` (a API não expõe contagem direta de avaliações). `rank`/`popularity` vêm de `rankings[]` filtrando `type: RATED`/`type: POPULAR` com `allTime: true` (nem todo anime tem os dois, fica `NULL`). `members` é o campo `popularity` da AniList (contagem de usuários com o anime na lista). `favorites` é `favourites`, direto. Detalhes completos em `plano-de-acao-projeto-anime.md`.
+- **Conteúdo adulto é filtrado no tratamento**: `tratar_dados.py` remove animes com `isAdult = true` ou gênero Hentai/Ecchi antes de gerar os CSVs (`filtrar_conteudo_adulto()`), fora de escopo pro portfólio. O JSON bruto em `data/raw/` continua intacto (raw data não é editado) — o filtro só existe na camada de tratamento pra frente. Efeito colateral: a coluna `classificacao_etaria` em `dim_anime` fica sempre `NULL` agora (só existia pra marcar `'Adult'`), é uma coluna morta que pode ser removida do schema numa limpeza futura se quiser.
 - **AniList tem rate limit de 30 req/min** (header `X-RateLimit-Limit`). `coletar_anilist.py` já tem espaçamento (2.2s) + retry/backoff leve, suficiente pra manter estabilidade.
 - **Escopo da coleta**: top 5.000 animes por popularidade (`LIMITE_PAGINAS = 100`, `PER_PAGE = 50` em `coletar_anilist.py`) — esse é o teto de profundidade de paginação da própria API AniList (`page * perPage <= 5000`), não uma escolha nossa. A base completa da AniList tem dezenas de milhares de títulos; ir além do teto exigiria particionar a coleta por outro critério (ano, gênero etc.) e deduplicar.
 - **Sem `dim_tempo`**: atributos de anime são estáticos; análise temporal usa `ano`/`temporada` do próprio anime, não da data de coleta.
@@ -55,8 +56,7 @@ Requer `.env` local com `DATABASE_URL` (ver `.env.example`) e banco `anime_analy
 
 ## Estado atual (ver plano de ação para detalhes)
 
-- Coleta e tratamento completos com o escopo de 5.000 animes (teto de paginação da API AniList): 5.000 animes, 410 estúdios, 19 gêneros em `data/processed/`.
-- Banco de dados ainda não carregado (`carga_sql.py` pendente de rodar sobre esse volume).
+- Coleta completa (5.000 animes, teto de paginação da API AniList) e tratamento com filtro de conteúdo adulto aplicado: **4.378 animes, 376 estúdios, 17 gêneros** em `data/processed/` e já carregados no Postgres.
 - Power BI: guia de referência escrito, dashboard ainda não iniciado.
 
 ## Perfil da usuária
