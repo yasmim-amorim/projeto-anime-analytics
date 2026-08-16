@@ -1,6 +1,19 @@
 -- Schema do projeto de análise de anime (API AniList, GraphQL)
 -- Dimensões primeiro, depois pontes N:N, depois fato.
 -- Fonte de dados: graphql.anilist.co (ver src/coletar_anilist.py)
+--
+-- Script de reset: os DROPs abaixo tornam esse arquivo seguro de rodar de novo
+-- (ex: numa migração de schema), mas são destrutivos — apagam tudo, inclusive
+-- o histórico acumulado em fato_anime_metricas. Rodar só na configuração
+-- inicial ou quando o schema muda de propósito. Pra carregar dados no dia a
+-- dia (sem perder histórico), usar src/carga_sql.py, que faz upsert.
+
+DROP TABLE IF EXISTS ponte_anime_genero CASCADE;
+DROP TABLE IF EXISTS ponte_anime_estudio CASCADE;
+DROP TABLE IF EXISTS fato_anime_metricas CASCADE;
+DROP TABLE IF EXISTS dim_anime CASCADE;
+DROP TABLE IF EXISTS dim_genero CASCADE;
+DROP TABLE IF EXISTS dim_estudio CASCADE;
 
 CREATE TABLE dim_anime (
     anime_id            INTEGER PRIMARY KEY,       -- id da AniList
@@ -15,14 +28,15 @@ CREATE TABLE dim_anime (
     data_inicio_exibicao DATE,
     data_fim_exibicao   DATE,
     duracao_min         NUMERIC,
-    classificacao_etaria TEXT,                     -- 'Adult' quando isAdult=true, senão NULL (AniList não tem rating tipo PG-13/R como o MAL)
     ano                 INTEGER,
     temporada            TEXT                      -- winter, spring, summer, fall
 );
 
+-- Sem id surrogate: a AniList não fornece id de gênero, e gerar um sequencial
+-- por ordem alfabética a cada coleta é instável (muda se o conjunto de
+-- gêneros mudar entre execuções). nome_genero é a chave natural e estável.
 CREATE TABLE dim_genero (
-    genero_id           INTEGER PRIMARY KEY,       -- id surrogate gerado no tratamento (AniList não tem id de gênero)
-    nome_genero          TEXT NOT NULL UNIQUE
+    nome_genero          TEXT PRIMARY KEY
 );
 
 CREATE TABLE dim_estudio (
@@ -32,8 +46,8 @@ CREATE TABLE dim_estudio (
 
 CREATE TABLE ponte_anime_genero (
     anime_id            INTEGER REFERENCES dim_anime(anime_id),
-    genero_id           INTEGER REFERENCES dim_genero(genero_id),
-    PRIMARY KEY (anime_id, genero_id)
+    nome_genero          TEXT REFERENCES dim_genero(nome_genero),
+    PRIMARY KEY (anime_id, nome_genero)
 );
 
 CREATE TABLE ponte_anime_estudio (

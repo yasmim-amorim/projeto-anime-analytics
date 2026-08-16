@@ -83,7 +83,6 @@ def construir_dim_anime(animes):
             "data_inicio_exibicao": parsear_data(inicio),
             "data_fim_exibicao": parsear_data(fim),
             "duracao_min": a.get("duration"),
-            "classificacao_etaria": "Adult" if a.get("isAdult") else None,
             "ano": a.get("seasonYear"),
             "temporada": a["season"].lower() if a.get("season") else None,
         })
@@ -94,16 +93,14 @@ def construir_dim_anime(animes):
 
 
 def construir_genero_tabelas(animes):
-    """AniList só tem uma lista simples de nomes de gênero (sem id nem tema/demografia)."""
+    """AniList só tem uma lista simples de nomes de gênero (sem id nem tema/demografia).
+    nome_genero é a chave natural de dim_genero — nada de id sequencial gerado aqui,
+    porque a ordem alfabética muda se o conjunto de gêneros mudar entre coletas."""
     nomes_generos = sorted({g for a in animes for g in (a.get("genres") or [])})
-    id_por_nome = {nome: i + 1 for i, nome in enumerate(nomes_generos)}
-
-    df_genero = pd.DataFrame(
-        [{"genero_id": gid, "nome_genero": nome} for nome, gid in id_por_nome.items()]
-    )
+    df_genero = pd.DataFrame({"nome_genero": nomes_generos})
 
     pontes = [
-        {"anime_id": a["id"], "genero_id": id_por_nome[g]}
+        {"anime_id": a["id"], "nome_genero": g}
         for a in animes
         for g in (a.get("genres") or [])
     ]

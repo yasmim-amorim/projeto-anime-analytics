@@ -16,16 +16,15 @@ WHERE rn = 1;
 -- Nota média por gênero
 CREATE OR REPLACE VIEW vw_nota_media_genero AS
 SELECT
-    g.genero_id,
     g.nome_genero,
     COUNT(*)                                            AS qtd_animes,
     ROUND(AVG(m.score)::numeric, 2)                     AS nota_media,
     ROUND(STDDEV(m.score)::numeric, 2)                  AS desvio_padrao_nota,
     ROUND(AVG(m.score) FILTER (WHERE m.scored_by >= 1000)::numeric, 2) AS nota_media_amostra_confiavel
 FROM dim_genero g
-JOIN ponte_anime_genero pg ON pg.genero_id = g.genero_id
+JOIN ponte_anime_genero pg ON pg.nome_genero = g.nome_genero
 JOIN vw_metricas_atuais m ON m.anime_id = pg.anime_id
-GROUP BY g.genero_id, g.nome_genero
+GROUP BY g.nome_genero
 ORDER BY nota_media DESC;
 
 
@@ -48,16 +47,15 @@ ORDER BY qtd_animes DESC, nota_media DESC;
 -- Engajamento do público por gênero (membros/favoritos, fidelização)
 CREATE OR REPLACE VIEW vw_engajamento_genero AS
 SELECT
-    g.genero_id,
     g.nome_genero,
     COUNT(*)                                                       AS qtd_animes,
     SUM(m.members)                                                 AS total_membros,
     SUM(m.favorites)                                                AS total_favoritos,
     ROUND((SUM(m.favorites)::numeric / NULLIF(SUM(m.members), 0)), 4) AS proporcao_favoritos_por_membro
 FROM dim_genero g
-JOIN ponte_anime_genero pg ON pg.genero_id = g.genero_id
+JOIN ponte_anime_genero pg ON pg.nome_genero = g.nome_genero
 JOIN vw_metricas_atuais m ON m.anime_id = pg.anime_id
-GROUP BY g.genero_id, g.nome_genero
+GROUP BY g.nome_genero
 ORDER BY proporcao_favoritos_por_membro DESC;
 
 
@@ -78,7 +76,7 @@ SELECT
 FROM dim_anime a
 JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
 LEFT JOIN ponte_anime_genero pg ON pg.anime_id = a.anime_id
-LEFT JOIN dim_genero g ON g.genero_id = pg.genero_id
+LEFT JOIN dim_genero g ON g.nome_genero = pg.nome_genero
 GROUP BY a.anime_id, a.titulo, a.tipo, a.fonte, a.ano, m.score, m.scored_by, m.popularity, m.members, m.favorites;
 
 
@@ -89,9 +87,9 @@ SELECT nome_genero, titulo, members, score, posicao
 FROM (
     SELECT
         g.nome_genero, a.titulo, m.members, m.score,
-        ROW_NUMBER() OVER (PARTITION BY g.genero_id ORDER BY m.members DESC, a.anime_id) AS posicao
+        ROW_NUMBER() OVER (PARTITION BY g.nome_genero ORDER BY m.members DESC, a.anime_id) AS posicao
     FROM dim_genero g
-    JOIN ponte_anime_genero pg ON pg.genero_id = g.genero_id
+    JOIN ponte_anime_genero pg ON pg.nome_genero = g.nome_genero
     JOIN dim_anime a ON a.anime_id = pg.anime_id
     JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
 ) ranking
@@ -106,9 +104,9 @@ SELECT nome_genero, titulo, score, members, posicao
 FROM (
     SELECT
         g.nome_genero, a.titulo, m.score, m.members,
-        ROW_NUMBER() OVER (PARTITION BY g.genero_id ORDER BY m.score DESC, m.scored_by DESC, a.anime_id) AS posicao
+        ROW_NUMBER() OVER (PARTITION BY g.nome_genero ORDER BY m.score DESC, m.scored_by DESC, a.anime_id) AS posicao
     FROM dim_genero g
-    JOIN ponte_anime_genero pg ON pg.genero_id = g.genero_id
+    JOIN ponte_anime_genero pg ON pg.nome_genero = g.nome_genero
     JOIN dim_anime a ON a.anime_id = pg.anime_id
     JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
     WHERE m.scored_by >= 500 AND m.score IS NOT NULL
@@ -121,9 +119,9 @@ SELECT
     g.nome_genero,
     a.titulo,
     m.score,
-    RANK() OVER (PARTITION BY g.genero_id ORDER BY m.score DESC) AS posicao_no_genero
+    RANK() OVER (PARTITION BY g.nome_genero ORDER BY m.score DESC) AS posicao_no_genero
 FROM dim_genero g
-JOIN ponte_anime_genero pg ON pg.genero_id = g.genero_id
+JOIN ponte_anime_genero pg ON pg.nome_genero = g.nome_genero
 JOIN dim_anime a ON a.anime_id = pg.anime_id
 JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
 ORDER BY g.nome_genero, posicao_no_genero;
@@ -251,7 +249,7 @@ WITH contagem AS (
         COUNT(*) FILTER (WHERE a.ano BETWEEN 2024 AND 2026) AS qtd_recente,
         COUNT(*) FILTER (WHERE a.ano BETWEEN 2021 AND 2023) AS qtd_anterior
     FROM dim_genero g
-    JOIN ponte_anime_genero pg ON pg.genero_id = g.genero_id
+    JOIN ponte_anime_genero pg ON pg.nome_genero = g.nome_genero
     JOIN dim_anime a ON a.anime_id = pg.anime_id
     GROUP BY g.nome_genero
 )

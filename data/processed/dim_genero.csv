@@ -1,18 +1,18 @@
-genero_id,nome_genero
-1,Action
-2,Adventure
-3,Comedy
-4,Drama
-5,Fantasy
-6,Horror
-7,Mahou Shoujo
-8,Mecha
-9,Music
-10,Mystery
-11,Psychological
-12,Romance
-13,Sci-Fi
-14,Slice of Life
-15,Sports
-16,Supernatural
-17,Thriller
+nome_genero
+Action
+Adventure
+Comedy
+Drama
+Fantasy
+Horror
+Mahou Shoujo
+Mecha
+Music
+Mystery
+Psychological
+Romance
+Sci-Fi
+Slice of Life
+Sports
+Supernatural
+Thriller

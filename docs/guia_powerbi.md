@@ -40,7 +40,7 @@ Crie estes relacionamentos (arrastando campo com campo, ou em **Gerenciar Relaci
 | De | Para | Cardinalidade | Direção do filtro |
 |---|---|---|---|
 | `dim_anime[anime_id]` | `fato_anime_metricas[anime_id]` | 1 : N | Único (padrão) |
-| `dim_genero[genero_id]` | `ponte_anime_genero[genero_id]` | 1 : N | Único (padrão) |
+| `dim_genero[nome_genero]` | `ponte_anime_genero[nome_genero]` | 1 : N | Único (padrão) |
 | `dim_anime[anime_id]` | `ponte_anime_genero[anime_id]` | 1 : N | **Ambos** ⚠️ |
 | `dim_estudio[estudio_id]` | `ponte_anime_estudio[estudio_id]` | 1 : N | Único (padrão) |
 | `dim_anime[anime_id]` | `ponte_anime_estudio[anime_id]` | 1 : N | **Ambos** ⚠️ |
@@ -74,7 +74,7 @@ Total de Favoritos = SUM(fato_anime_metricas[favorites])
 Proporcao Favoritos por Membro =
 DIVIDE(SUM(fato_anime_metricas[favorites]), SUM(fato_anime_metricas[members]))
 
-Generos Cobertos = DISTINCTCOUNT(dim_genero[genero_id])
+Generos Cobertos = DISTINCTCOUNT(dim_genero[nome_genero])
 
 Estudios Cobertos = DISTINCTCOUNT(dim_estudio[estudio_id])
 
@@ -186,7 +186,7 @@ Filtros de página: slicer `dim_anime[ano]` (2013-2027) e slicer `dim_anime[temp
 | Como o número de lançamentos mudou ao longo dos anos | **[nativo]** Mesmo gráfico da Página 1 (linha por `ano`) |
 | "Qual foi o anime mais popular do Summer 2025?" (exemplo de pergunta ad-hoc) | **[nativo]** Aplicar os dois slicers da página (`ano = 2025`, `temporada = summer`) sobre a tabela Top N de populares — funciona pra qualquer combinação ano+temporada, não precisa de view nova |
 
-**Filtros globais (todas as páginas):** `dim_anime[tipo]`, `dim_anime[fonte]`, `dim_anime[status]`, `dim_anime[ano]`, `dim_anime[temporada]`, `dim_genero[nome_genero]`, `dim_estudio[nome_estudio]`. (`classificacao_etaria` saiu — ver seção "Filtro de conteúdo adulto" no CLAUDE.md, a coluna fica sempre vazia agora.)
+**Filtros globais (todas as páginas):** `dim_anime[tipo]`, `dim_anime[fonte]`, `dim_anime[status]`, `dim_anime[ano]`, `dim_anime[temporada]`, `dim_genero[nome_genero]`, `dim_estudio[nome_estudio]`. (`classificacao_etaria` foi removida do schema — ver CLAUDE.md; não existe mais como coluna, não só "sempre vazia".)
 
 ## Sobre as abas de Mangá
 
@@ -205,3 +205,5 @@ Aproximação adotada: uma visual "Em alta agora" com filtro de `ano`/`temporada
 ## Atualizando os dados
 
 Se a coleta rodar de novo (`coletar_anilist.py` → `tratar_dados.py` → `carga_sql.py`), não é preciso refazer nada no Power BI — só clicar em **Atualizar** depois de recarregar o banco.
+
+`carga_sql.py` faz **upsert** (via staging table + `INSERT ... ON CONFLICT`), não `TRUNCATE`: rodar de novo atualiza dimensões/pontes e *soma* uma nova linha por anime em `fato_anime_metricas` (chave `anime_id + data_coleta`), sem apagar coletas antigas. Rodar duas vezes no mesmo dia não duplica nada nem quebra — a segunda vez só atualiza os mesmos valores no lugar (testado). `sql/ddl.sql`, por outro lado, **é destrutivo** (`DROP TABLE ... CASCADE` no topo) — só rodar na configuração inicial ou se o schema mudar de propósito; nunca como parte do fluxo normal de recoleta.
