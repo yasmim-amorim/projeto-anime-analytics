@@ -54,8 +54,7 @@ Total de Favoritos = SUM(fato_anime_metricas[favorites])
 Proporcao Favoritos por Membro =
 DIVIDE(SUM(fato_anime_metricas[favorites]), SUM(fato_anime_metricas[members]))
 
-Generos Cobertos =
-CALCULATE(DISTINCTCOUNT(dim_genero[genero_id]), dim_genero[tipo_classificacao] = "genre")
+Generos Cobertos = DISTINCTCOUNT(dim_genero[genero_id])
 
 Estudios Cobertos = DISTINCTCOUNT(dim_estudio[estudio_id])
 
@@ -73,9 +72,8 @@ RANKX(ALL(dim_anime[anime_id]), CALCULATE(AVERAGE(fato_anime_metricas[score])), 
 - Gráfico de colunas: distribuição de animes por `dim_anime[tipo]`
 
 **Página 2 — Análise por Gênero**
-- Tabela ou gráfico de barras: `dim_genero[nome_genero]` x `Nota Media` (filtrar `tipo_classificacao = "genre"`)
+- Tabela ou gráfico de barras: `dim_genero[nome_genero]` x `Nota Media`
 - Gráfico de dispersão (scatter): eixo X `Total de Membros`, eixo Y `Nota Media`, por gênero — identifica "cult vs hype"
-- Filtro de página: `dim_genero[tipo_classificacao]`
 
 **Página 3 — Análise por Estúdio**
 - Tabela: `dim_estudio[nome_estudio]`, `Total de Animes`, `Nota Media`, `Total de Membros`, ordenada por volume

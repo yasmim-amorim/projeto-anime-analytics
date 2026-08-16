@@ -18,7 +18,7 @@ WHERE rn = 1;
 
 
 -- ============================================================
--- 1. Nota média por gênero (só gêneros de verdade, não themes/demographics)
+-- 1. Nota média por gênero
 -- ============================================================
 CREATE OR REPLACE VIEW vw_nota_media_genero AS
 SELECT
@@ -31,7 +31,6 @@ SELECT
 FROM dim_genero g
 JOIN ponte_anime_genero pg ON pg.genero_id = g.genero_id
 JOIN vw_metricas_atuais m ON m.anime_id = pg.anime_id
-WHERE g.tipo_classificacao = 'genre'
 GROUP BY g.genero_id, g.nome_genero
 ORDER BY nota_media DESC;
 
@@ -68,7 +67,6 @@ SELECT
 FROM dim_genero g
 JOIN ponte_anime_genero pg ON pg.genero_id = g.genero_id
 JOIN vw_metricas_atuais m ON m.anime_id = pg.anime_id
-WHERE g.tipo_classificacao = 'genre'
 GROUP BY g.genero_id, g.nome_genero
 ORDER BY proporcao_favoritos_por_membro DESC;
 
@@ -88,7 +86,7 @@ SELECT
     m.popularity,
     m.members,
     m.favorites,
-    STRING_AGG(g.nome_genero, ', ' ORDER BY g.nome_genero) FILTER (WHERE g.tipo_classificacao = 'genre') AS generos
+    STRING_AGG(g.nome_genero, ', ' ORDER BY g.nome_genero) AS generos
 FROM dim_anime a
 JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
 LEFT JOIN ponte_anime_genero pg ON pg.anime_id = a.anime_id
@@ -110,7 +108,6 @@ FROM dim_genero g
 JOIN ponte_anime_genero pg ON pg.genero_id = g.genero_id
 JOIN dim_anime a ON a.anime_id = pg.anime_id
 JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
-WHERE g.tipo_classificacao = 'genre'
 ORDER BY g.nome_genero, posicao_no_genero;
 
 -- 6. Faixas de popularidade (quartis) via NTILE()
