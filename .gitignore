@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 .env
 .vscode/
+
+# Notas de planejamento e material de trabalho interno (não fazem parte do portfólio público)
+plano-de-acao-projeto-anime.md
+local_archive/

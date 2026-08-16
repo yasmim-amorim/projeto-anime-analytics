@@ -1,5 +1,5 @@
 """
-Carga dos dados tratados no PostgreSQL (Etapa 5 do plano).
+Carga dos dados tratados no PostgreSQL.
 
 Lê os CSVs gerados por tratar_dados.py e carrega no banco, respeitando a ordem:
 dimensões -> pontes (N:N) -> fato. Usa "replace" nas dimensões/pontes (a coleta

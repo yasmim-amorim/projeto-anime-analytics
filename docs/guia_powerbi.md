@@ -1,4 +1,4 @@
-# Guia Power BI — Etapas 7 e 8
+# Guia de Referência — Power BI
 
 Guia de referência para montar o dashboard no Power BI Desktop, conectado ao banco `anime_analytics`. Siga na ordem.
 
@@ -89,6 +89,6 @@ RANKX(ALL(dim_anime[anime_id]), CALCULATE(AVERAGE(fato_anime_metricas[score])), 
 
 **Filtros globais (todas as páginas):** `dim_anime[tipo]`, `dim_anime[fonte]`, `dim_anime[status]`, `dim_anime[classificacao_etaria]`, `dim_anime[ano]`, `dim_anime[temporada]`, `dim_genero[nome_genero]`, `dim_estudio[nome_estudio]`
 
-## Nota sobre o tamanho da amostra
+## Atualizando os dados
 
-Com ~25 animes coletados até agora, os gráficos vão ficar "magros" (poucas barras, poucos pontos). Isso é esperado — o dashboard funciona igual quando a coleta tiver mais dados (basta rodar `carga_sql.py` de novo depois de coletar mais). Não precisa refazer nada no Power BI, só clicar em **Atualizar** depois de recarregar o banco.
+Se a coleta rodar de novo (`coletar_anilist.py` → `tratar_dados.py` → `carga_sql.py`), não é preciso refazer nada no Power BI — só clicar em **Atualizar** depois de recarregar o banco.

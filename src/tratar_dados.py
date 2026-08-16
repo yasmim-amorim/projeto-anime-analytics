@@ -1,5 +1,5 @@
 """
-Tratamento dos dados brutos coletados da API AniList (Etapa 4 do plano).
+Tratamento dos dados brutos coletados da API AniList.
 
 Lê todos os anime_pagina_*.json da coleta mais recente em data/raw/anilist/<data>/,
 normaliza os campos aninhados (genres, studios, rankings, stats) e gera os

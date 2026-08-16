@@ -1,0 +1,5735 @@
+{
+  "pageInfo": {
+    "hasNextPage": true,
+    "total": 5000
+  },
+  "media": [
+    {
+      "id": 565,
+      "title": {
+        "romaji": "Steamboy",
+        "english": "Steamboy",
+        "native": "スチームボーイ"
+      },
+      "format": "MOVIE",
+      "source": "ORIGINAL",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2004,
+        "month": 7,
+        "day": 17
+      },
+      "endDate": {
+        "year": 2004,
+        "month": 7,
+        "day": 17
+      },
+      "duration": 126,
+      "averageScore": 70,
+      "isAdult": false,
+      "season": "SUMMER",
+      "seasonYear": 2004,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "favourites": 178,
+      "popularity": 20736,
+      "studios": {
+        "nodes": [
+          {
+            "id": 134,
+            "name": "Horipro",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 14,
+            "name": "Sunrise",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 6,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 9,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 30
+          },
+          {
+            "score": 20,
+            "amount": 26
+          },
+          {
+            "score": 30,
+            "amount": 123
+          },
+          {
+            "score": 40,
+            "amount": 221
+          },
+          {
+            "score": 50,
+            "amount": 595
+          },
+          {
+            "score": 60,
+            "amount": 1124
+          },
+          {
+            "score": 70,
+            "amount": 2048
+          },
+          {
+            "score": 80,
+            "amount": 1682
+          },
+          {
+            "score": 90,
+            "amount": 748
+          },
+          {
+            "score": 100,
+            "amount": 381
+          }
+        ]
+      }
+    },
+    {
+      "id": 1288,
+      "title": {
+        "romaji": "Kidou Keisatsu Patlabor",
+        "english": "Mobile Police Patlabor",
+        "native": "機動警察パトレイバー"
+      },
+      "format": "OVA",
+      "source": "ORIGINAL",
+      "episodes": 7,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 1988,
+        "month": 4,
+        "day": 25
+      },
+      "endDate": {
+        "year": 1989,
+        "month": 6,
+        "day": 25
+      },
+      "duration": 30,
+      "averageScore": 72,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 1988,
+      "genres": [
+        "Comedy",
+        "Mecha",
+        "Sci-Fi"
+      ],
+      "favourites": 372,
+      "popularity": 20729,
+      "studios": {
+        "nodes": [
+          {
+            "id": 37,
+            "name": "Studio DEEN",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 57,
+            "name": "Touhouku Shinsha",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 490,
+            "name": "Maiden Japan",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 25
+          },
+          {
+            "score": 20,
+            "amount": 17
+          },
+          {
+            "score": 30,
+            "amount": 57
+          },
+          {
+            "score": 40,
+            "amount": 129
+          },
+          {
+            "score": 50,
+            "amount": 436
+          },
+          {
+            "score": 60,
+            "amount": 860
+          },
+          {
+            "score": 70,
+            "amount": 2058
+          },
+          {
+            "score": 80,
+            "amount": 1806
+          },
+          {
+            "score": 90,
+            "amount": 872
+          },
+          {
+            "score": 100,
+            "amount": 317
+          }
+        ]
+      }
+    },
+    {
+      "id": 174914,
+      "title": {
+        "romaji": "Tensei Akujo no Kuro Rekishi",
+        "english": "The Dark History of the Reincarnated Villainess",
+        "native": "転生悪女の黒歴史"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2025,
+        "month": 10,
+        "day": 9
+      },
+      "endDate": {
+        "year": 2025,
+        "month": 12,
+        "day": 25
+      },
+      "duration": 24,
+      "averageScore": 66,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2025,
+      "genres": [
+        "Comedy",
+        "Fantasy",
+        "Romance"
+      ],
+      "favourites": 335,
+      "popularity": 20711,
+      "studios": {
+        "nodes": [
+          {
+            "id": 37,
+            "name": "Studio DEEN",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6612,
+            "name": "FuRyu",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 16,
+            "name": "TV Tokyo",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 751,
+            "name": "Marvelous",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 148,
+            "name": "Hakusensha",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7599,
+            "name": "ANICI",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7389,
+            "name": "HIKE",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6616,
+            "name": "BS11",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6818,
+            "name": "81 Produce",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 460,
+            "name": "KLOCKWORX",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 28,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 25,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 58
+          },
+          {
+            "score": 20,
+            "amount": 42
+          },
+          {
+            "score": 30,
+            "amount": 117
+          },
+          {
+            "score": 40,
+            "amount": 220
+          },
+          {
+            "score": 50,
+            "amount": 634
+          },
+          {
+            "score": 60,
+            "amount": 1175
+          },
+          {
+            "score": 70,
+            "amount": 1514
+          },
+          {
+            "score": 80,
+            "amount": 943
+          },
+          {
+            "score": 90,
+            "amount": 574
+          },
+          {
+            "score": 100,
+            "amount": 281
+          }
+        ]
+      }
+    },
+    {
+      "id": 634,
+      "title": {
+        "romaji": "Koi Kaze",
+        "english": null,
+        "native": "恋風"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 13,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2004,
+        "month": 4,
+        "day": 2
+      },
+      "endDate": {
+        "year": 2004,
+        "month": 6,
+        "day": 18
+      },
+      "duration": 24,
+      "averageScore": 66,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2004,
+      "genres": [
+        "Drama",
+        "Psychological",
+        "Romance",
+        "Slice of Life"
+      ],
+      "favourites": 198,
+      "popularity": 20706,
+      "studios": {
+        "nodes": [
+          {
+            "id": 31,
+            "name": "NBCUniversal Entertainment Japan",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 55,
+            "name": "TV Asahi",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 160,
+            "name": "Rondo Robe",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 179,
+            "name": "A.C.G.T.",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 49,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 26,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 18,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 7,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 182
+          },
+          {
+            "score": 20,
+            "amount": 152
+          },
+          {
+            "score": 30,
+            "amount": 141
+          },
+          {
+            "score": 40,
+            "amount": 324
+          },
+          {
+            "score": 50,
+            "amount": 512
+          },
+          {
+            "score": 60,
+            "amount": 987
+          },
+          {
+            "score": 70,
+            "amount": 1404
+          },
+          {
+            "score": 80,
+            "amount": 1207
+          },
+          {
+            "score": 90,
+            "amount": 641
+          },
+          {
+            "score": 100,
+            "amount": 391
+          }
+        ]
+      }
+    },
+    {
+      "id": 167146,
+      "title": {
+        "romaji": "Momochi-san Chi no Ayakashi Ouji",
+        "english": "The Demon Prince of Momochi House",
+        "native": "百千さん家のあやかし王子"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2024,
+        "month": 1,
+        "day": 6
+      },
+      "endDate": {
+        "year": 2024,
+        "month": 3,
+        "day": 23
+      },
+      "duration": 24,
+      "averageScore": 62,
+      "isAdult": false,
+      "season": "WINTER",
+      "seasonYear": 2024,
+      "genres": [
+        "Romance",
+        "Supernatural"
+      ],
+      "favourites": 228,
+      "popularity": 20677,
+      "studios": {
+        "nodes": [
+          {
+            "id": 6289,
+            "name": "Drive",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 17,
+            "name": "Aniplex",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6421,
+            "name": "Crunchyroll",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 166,
+            "name": "Movic",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6616,
+            "name": "BS11",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 94
+          },
+          {
+            "score": 20,
+            "amount": 88
+          },
+          {
+            "score": 30,
+            "amount": 189
+          },
+          {
+            "score": 40,
+            "amount": 347
+          },
+          {
+            "score": 50,
+            "amount": 702
+          },
+          {
+            "score": 60,
+            "amount": 1173
+          },
+          {
+            "score": 70,
+            "amount": 1012
+          },
+          {
+            "score": 80,
+            "amount": 609
+          },
+          {
+            "score": 90,
+            "amount": 424
+          },
+          {
+            "score": 100,
+            "amount": 226
+          }
+        ]
+      }
+    },
+    {
+      "id": 155348,
+      "title": {
+        "romaji": "ROAD OF NARUTO",
+        "english": null,
+        "native": "ROAD OF NARUTO"
+      },
+      "format": "SPECIAL",
+      "source": "MANGA",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2022,
+        "month": 10,
+        "day": 3
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 10,
+        "day": 3
+      },
+      "duration": 10,
+      "averageScore": 82,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2022,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Supernatural"
+      ],
+      "favourites": 374,
+      "popularity": 20656,
+      "studios": {
+        "nodes": [
+          {
+            "id": 1,
+            "name": "Studio Pierrot",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 53
+          },
+          {
+            "score": 20,
+            "amount": 25
+          },
+          {
+            "score": 30,
+            "amount": 42
+          },
+          {
+            "score": 40,
+            "amount": 56
+          },
+          {
+            "score": 50,
+            "amount": 241
+          },
+          {
+            "score": 60,
+            "amount": 391
+          },
+          {
+            "score": 70,
+            "amount": 1156
+          },
+          {
+            "score": 80,
+            "amount": 2046
+          },
+          {
+            "score": 90,
+            "amount": 2117
+          },
+          {
+            "score": 100,
+            "amount": 2080
+          }
+        ]
+      }
+    },
+    {
+      "id": 594,
+      "title": {
+        "romaji": "NARUTO: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!",
+        "english": "Naruto: The Lost Story - Mission: Protect the Waterfall Village",
+        "native": "NARUTO -ナルト- 滝隠れの死闘 オレが英雄だってばよ！"
+      },
+      "format": "SPECIAL",
+      "source": "MANGA",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2003,
+        "month": 12,
+        "day": 20
+      },
+      "endDate": {
+        "year": 2003,
+        "month": 12,
+        "day": 20
+      },
+      "duration": 40,
+      "averageScore": 64,
+      "isAdult": false,
+      "season": "WINTER",
+      "seasonYear": 2003,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "favourites": 149,
+      "popularity": 20646,
+      "studios": {
+        "nodes": [
+          {
+            "id": 1,
+            "name": "Studio Pierrot",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6570,
+            "name": "Shueisha",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 1,
+            "name": "Studio Pierrot",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 16,
+            "name": "TV Tokyo",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 109
+          },
+          {
+            "score": 20,
+            "amount": 105
+          },
+          {
+            "score": 30,
+            "amount": 232
+          },
+          {
+            "score": 40,
+            "amount": 480
+          },
+          {
+            "score": 50,
+            "amount": 1241
+          },
+          {
+            "score": 60,
+            "amount": 2093
+          },
+          {
+            "score": 70,
+            "amount": 2181
+          },
+          {
+            "score": 80,
+            "amount": 979
+          },
+          {
+            "score": 90,
+            "amount": 672
+          },
+          {
+            "score": 100,
+            "amount": 540
+          }
+        ]
+      }
+    },
+    {
+      "id": 14189,
+      "title": {
+        "romaji": "Tasogare Otome x Amnesia: Taima Otome",
+        "english": "Dusk Maiden of Amnesia: \"Ghost Girl\"",
+        "native": "黄昏乙女×アムネジア 退魔乙女"
+      },
+      "format": "OVA",
+      "source": "MANGA",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2012,
+        "month": 11,
+        "day": 28
+      },
+      "endDate": {
+        "year": 2012,
+        "month": 11,
+        "day": 28
+      },
+      "duration": 24,
+      "averageScore": 72,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2012,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Romance",
+        "Supernatural"
+      ],
+      "favourites": 185,
+      "popularity": 20622,
+      "studios": {
+        "nodes": [
+          {
+            "id": 300,
+            "name": "SILVER LINK.",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 376,
+            "name": "Sentai Filmworks",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 11,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 16,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 35
+          },
+          {
+            "score": 20,
+            "amount": 43
+          },
+          {
+            "score": 30,
+            "amount": 100
+          },
+          {
+            "score": 40,
+            "amount": 218
+          },
+          {
+            "score": 50,
+            "amount": 604
+          },
+          {
+            "score": 60,
+            "amount": 1329
+          },
+          {
+            "score": 70,
+            "amount": 3053
+          },
+          {
+            "score": 80,
+            "amount": 2363
+          },
+          {
+            "score": 90,
+            "amount": 1087
+          },
+          {
+            "score": 100,
+            "amount": 745
+          }
+        ]
+      }
+    },
+    {
+      "id": 20777,
+      "title": {
+        "romaji": "Chuunibyou demo Koi ga Shitai! Ren Specials",
+        "english": "Love, Chunibyo & Other Delusions - Heart Throb - Specials",
+        "native": "中二病でも恋がしたい！戀 未放送ショートムービー"
+      },
+      "format": "SPECIAL",
+      "source": "LIGHT_NOVEL",
+      "episodes": 7,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2014,
+        "month": 3,
+        "day": 19
+      },
+      "endDate": {
+        "year": 2014,
+        "month": 9,
+        "day": 17
+      },
+      "duration": 3,
+      "averageScore": 69,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2014,
+      "genres": [
+        "Comedy"
+      ],
+      "favourites": 148,
+      "popularity": 20606,
+      "studios": {
+        "nodes": [
+          {
+            "id": 2,
+            "name": "Kyoto Animation",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 48
+          },
+          {
+            "score": 20,
+            "amount": 58
+          },
+          {
+            "score": 30,
+            "amount": 138
+          },
+          {
+            "score": 40,
+            "amount": 229
+          },
+          {
+            "score": 50,
+            "amount": 809
+          },
+          {
+            "score": 60,
+            "amount": 1636
+          },
+          {
+            "score": 70,
+            "amount": 2711
+          },
+          {
+            "score": 80,
+            "amount": 1495
+          },
+          {
+            "score": 90,
+            "amount": 802
+          },
+          {
+            "score": 100,
+            "amount": 613
+          }
+        ]
+      }
+    },
+    {
+      "id": 20533,
+      "title": {
+        "romaji": "Buddy Complex",
+        "english": "Buddy Complex",
+        "native": "バディ・コンプレックス"
+      },
+      "format": "TV",
+      "source": "ORIGINAL",
+      "episodes": 13,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2014,
+        "month": 1,
+        "day": 6
+      },
+      "endDate": {
+        "year": 2014,
+        "month": 3,
+        "day": 31
+      },
+      "duration": 24,
+      "averageScore": 67,
+      "isAdult": false,
+      "season": "WINTER",
+      "seasonYear": 2014,
+      "genres": [
+        "Action",
+        "Drama",
+        "Mecha",
+        "Sci-Fi"
+      ],
+      "favourites": 221,
+      "popularity": 20570,
+      "studios": {
+        "nodes": [
+          {
+            "id": 14,
+            "name": "Sunrise",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 104,
+            "name": "Lantis",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 89,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 17,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 19,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 92
+          },
+          {
+            "score": 20,
+            "amount": 75
+          },
+          {
+            "score": 30,
+            "amount": 162
+          },
+          {
+            "score": 40,
+            "amount": 332
+          },
+          {
+            "score": 50,
+            "amount": 758
+          },
+          {
+            "score": 60,
+            "amount": 1266
+          },
+          {
+            "score": 70,
+            "amount": 2084
+          },
+          {
+            "score": 80,
+            "amount": 1447
+          },
+          {
+            "score": 90,
+            "amount": 600
+          },
+          {
+            "score": 100,
+            "amount": 393
+          }
+        ]
+      }
+    },
+    {
+      "id": 112686,
+      "title": {
+        "romaji": "7SEEDS 2",
+        "english": "7SEEDS Part 2",
+        "native": "7SEEDS 2"
+      },
+      "format": "ONA",
+      "source": "MANGA",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2020,
+        "month": 3,
+        "day": 26
+      },
+      "endDate": {
+        "year": 2020,
+        "month": 3,
+        "day": 26
+      },
+      "duration": 25,
+      "averageScore": 69,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2020,
+      "genres": [
+        "Action",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "favourites": 198,
+      "popularity": 20556,
+      "studios": {
+        "nodes": [
+          {
+            "id": 3,
+            "name": "GONZO",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6312,
+            "name": "Studio KAI",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6787,
+            "name": "Netflix",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 376,
+            "name": "Sentai Filmworks",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 15,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 88
+          },
+          {
+            "score": 20,
+            "amount": 84
+          },
+          {
+            "score": 30,
+            "amount": 201
+          },
+          {
+            "score": 40,
+            "amount": 378
+          },
+          {
+            "score": 50,
+            "amount": 767
+          },
+          {
+            "score": 60,
+            "amount": 1483
+          },
+          {
+            "score": 70,
+            "amount": 2662
+          },
+          {
+            "score": 80,
+            "amount": 2007
+          },
+          {
+            "score": 90,
+            "amount": 1014
+          },
+          {
+            "score": 100,
+            "amount": 691
+          }
+        ]
+      }
+    },
+    {
+      "id": 15377,
+      "title": {
+        "romaji": "Hyakka Ryouran: Samurai Bride",
+        "english": "Samurai Bride",
+        "native": "百花繚乱 サムライブライド"
+      },
+      "format": "TV",
+      "source": "LIGHT_NOVEL",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2013,
+        "month": 4,
+        "day": 5
+      },
+      "endDate": {
+        "year": 2013,
+        "month": 6,
+        "day": 21
+      },
+      "duration": 24,
+      "averageScore": 63,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2013,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Ecchi",
+        "Romance"
+      ],
+      "favourites": 191,
+      "popularity": 20547,
+      "studios": {
+        "nodes": [
+          {
+            "id": 38,
+            "name": "ARMS",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 79,
+            "name": "Genco",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 104,
+            "name": "Lantis",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 376,
+            "name": "Sentai Filmworks",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 547,
+            "name": "Hobby Japan",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 95,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 82,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 22,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 18,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 98
+          },
+          {
+            "score": 20,
+            "amount": 126
+          },
+          {
+            "score": 30,
+            "amount": 259
+          },
+          {
+            "score": 40,
+            "amount": 468
+          },
+          {
+            "score": 50,
+            "amount": 898
+          },
+          {
+            "score": 60,
+            "amount": 1554
+          },
+          {
+            "score": 70,
+            "amount": 1780
+          },
+          {
+            "score": 80,
+            "amount": 896
+          },
+          {
+            "score": 90,
+            "amount": 441
+          },
+          {
+            "score": 100,
+            "amount": 334
+          }
+        ]
+      }
+    },
+    {
+      "id": 98574,
+      "title": {
+        "romaji": "Yi Ren Zhi Xia 2",
+        "english": "Hitori no Shita - The Outcast 2",
+        "native": "一人之下 2"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 24,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2017,
+        "month": 10,
+        "day": 27
+      },
+      "endDate": {
+        "year": 2018,
+        "month": 5,
+        "day": 18
+      },
+      "duration": 24,
+      "averageScore": 71,
+      "isAdult": false,
+      "season": null,
+      "seasonYear": null,
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "favourites": 265,
+      "popularity": 20537,
+      "studios": {
+        "nodes": [
+          {
+            "id": 6140,
+            "name": "Haoliners Animation",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6129,
+            "name": "Tencent Animation & Comics",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 55,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 95,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 57
+          },
+          {
+            "score": 20,
+            "amount": 35
+          },
+          {
+            "score": 30,
+            "amount": 73
+          },
+          {
+            "score": 40,
+            "amount": 120
+          },
+          {
+            "score": 50,
+            "amount": 390
+          },
+          {
+            "score": 60,
+            "amount": 844
+          },
+          {
+            "score": 70,
+            "amount": 2025
+          },
+          {
+            "score": 80,
+            "amount": 1676
+          },
+          {
+            "score": 90,
+            "amount": 729
+          },
+          {
+            "score": 100,
+            "amount": 377
+          }
+        ]
+      }
+    },
+    {
+      "id": 12783,
+      "title": {
+        "romaji": "Sora no Otoshimono Final: Eien no Watashi no Torikago",
+        "english": "Heaven's Lost Property Final – The Movie: Eternally My Master",
+        "native": "そらのおとしものＦｉｎａｌ永遠の私の鳥籠［エターナルマイマスター］"
+      },
+      "format": "MOVIE",
+      "source": "MANGA",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2014,
+        "month": 4,
+        "day": 26
+      },
+      "endDate": {
+        "year": 2014,
+        "month": 4,
+        "day": 26
+      },
+      "duration": 49,
+      "averageScore": 63,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2014,
+      "genres": [
+        "Comedy",
+        "Ecchi",
+        "Romance",
+        "Sci-Fi",
+        "Supernatural"
+      ],
+      "favourites": 222,
+      "popularity": 20534,
+      "studios": {
+        "nodes": [
+          {
+            "id": 4420,
+            "name": "Production IMS",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 39,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 8,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 235
+          },
+          {
+            "score": 20,
+            "amount": 224
+          },
+          {
+            "score": 30,
+            "amount": 394
+          },
+          {
+            "score": 40,
+            "amount": 651
+          },
+          {
+            "score": 50,
+            "amount": 873
+          },
+          {
+            "score": 60,
+            "amount": 1465
+          },
+          {
+            "score": 70,
+            "amount": 1862
+          },
+          {
+            "score": 80,
+            "amount": 1109
+          },
+          {
+            "score": 90,
+            "amount": 784
+          },
+          {
+            "score": 100,
+            "amount": 578
+          }
+        ]
+      }
+    },
+    {
+      "id": 160442,
+      "title": {
+        "romaji": "Rokudou no Onna-tachi",
+        "english": "Rokudo's Bad Girls",
+        "native": "六道の悪女たち"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2023,
+        "month": 4,
+        "day": 8
+      },
+      "endDate": {
+        "year": 2023,
+        "month": 6,
+        "day": 24
+      },
+      "duration": 24,
+      "averageScore": 61,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2023,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Drama",
+        "Romance",
+        "Supernatural"
+      ],
+      "favourites": 322,
+      "popularity": 20533,
+      "studios": {
+        "nodes": [
+          {
+            "id": 41,
+            "name": "Satelight",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 7203,
+            "name": "Mixer",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6421,
+            "name": "Crunchyroll",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 143,
+            "name": "Mainichi Broadcasting System",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 31,
+            "name": "NBCUniversal Entertainment Japan",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7397,
+            "name": "HIAN",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6677,
+            "name": "MAGNET",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6796,
+            "name": "BS Asahi",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7097,
+            "name": "Live Viewing Japan",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6559,
+            "name": "Akita Shoten",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 133
+          },
+          {
+            "score": 20,
+            "amount": 109
+          },
+          {
+            "score": 30,
+            "amount": 250
+          },
+          {
+            "score": 40,
+            "amount": 429
+          },
+          {
+            "score": 50,
+            "amount": 791
+          },
+          {
+            "score": 60,
+            "amount": 1293
+          },
+          {
+            "score": 70,
+            "amount": 1365
+          },
+          {
+            "score": 80,
+            "amount": 717
+          },
+          {
+            "score": 90,
+            "amount": 409
+          },
+          {
+            "score": 100,
+            "amount": 214
+          }
+        ]
+      }
+    },
+    {
+      "id": 200929,
+      "title": {
+        "romaji": "Kusuriya no Hitorigoto: Bouhi no Hihou",
+        "english": null,
+        "native": "薬屋のひとりごと 亡妃の秘宝"
+      },
+      "format": "MOVIE",
+      "source": "ORIGINAL",
+      "episodes": 1,
+      "status": "NOT_YET_RELEASED",
+      "startDate": {
+        "year": 2026,
+        "month": 12,
+        "day": 11
+      },
+      "endDate": {
+        "year": 2026,
+        "month": 12,
+        "day": 11
+      },
+      "duration": null,
+      "averageScore": null,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2026,
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "favourites": 166,
+      "popularity": 20520,
+      "studios": {
+        "nodes": [
+          {
+            "id": 245,
+            "name": "Toho",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7368,
+            "name": "TOHO animation STUDIO",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 7,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 2
+          },
+          {
+            "score": 20,
+            "amount": 1
+          },
+          {
+            "score": 30,
+            "amount": 1
+          },
+          {
+            "score": 50,
+            "amount": 2
+          },
+          {
+            "score": 60,
+            "amount": 1
+          },
+          {
+            "score": 70,
+            "amount": 4
+          },
+          {
+            "score": 80,
+            "amount": 9
+          },
+          {
+            "score": 90,
+            "amount": 33
+          },
+          {
+            "score": 100,
+            "amount": 38
+          }
+        ]
+      }
+    },
+    {
+      "id": 101633,
+      "title": {
+        "romaji": "BanG Dream! 2nd Season",
+        "english": "BanG Dream! 2nd Season",
+        "native": "BanG Dream! 2nd Season"
+      },
+      "format": "TV",
+      "source": "OTHER",
+      "episodes": 13,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2019,
+        "month": 1,
+        "day": 3
+      },
+      "endDate": {
+        "year": 2019,
+        "month": 3,
+        "day": 28
+      },
+      "duration": 23,
+      "averageScore": 74,
+      "isAdult": false,
+      "season": "WINTER",
+      "seasonYear": 2019,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Music",
+        "Slice of Life"
+      ],
+      "favourites": 444,
+      "popularity": 20510,
+      "studios": {
+        "nodes": [
+          {
+            "id": 537,
+            "name": "SANZIGEN",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 911,
+            "name": "Passione",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6072,
+            "name": "Creators in Pack",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 42,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 87,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 11,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 17,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 75
+          },
+          {
+            "score": 20,
+            "amount": 39
+          },
+          {
+            "score": 30,
+            "amount": 111
+          },
+          {
+            "score": 40,
+            "amount": 202
+          },
+          {
+            "score": 50,
+            "amount": 485
+          },
+          {
+            "score": 60,
+            "amount": 927
+          },
+          {
+            "score": 70,
+            "amount": 2132
+          },
+          {
+            "score": 80,
+            "amount": 2433
+          },
+          {
+            "score": 90,
+            "amount": 1562
+          },
+          {
+            "score": 100,
+            "amount": 845
+          }
+        ]
+      }
+    },
+    {
+      "id": 17121,
+      "title": {
+        "romaji": "Dareka no Manazashi",
+        "english": null,
+        "native": "だれかのまなざし"
+      },
+      "format": "MOVIE",
+      "source": "ORIGINAL",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2013,
+        "month": 2,
+        "day": 10
+      },
+      "endDate": {
+        "year": 2013,
+        "month": 2,
+        "day": 10
+      },
+      "duration": 7,
+      "averageScore": 70,
+      "isAdult": false,
+      "season": "WINTER",
+      "seasonYear": 2013,
+      "genres": [
+        "Drama",
+        "Slice of Life"
+      ],
+      "favourites": 106,
+      "popularity": 20506,
+      "studios": {
+        "nodes": [
+          {
+            "id": 291,
+            "name": "CoMix Wave",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 34,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 24,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 51
+          },
+          {
+            "score": 20,
+            "amount": 49
+          },
+          {
+            "score": 30,
+            "amount": 111
+          },
+          {
+            "score": 40,
+            "amount": 255
+          },
+          {
+            "score": 50,
+            "amount": 892
+          },
+          {
+            "score": 60,
+            "amount": 1595
+          },
+          {
+            "score": 70,
+            "amount": 3218
+          },
+          {
+            "score": 80,
+            "amount": 2434
+          },
+          {
+            "score": 90,
+            "amount": 971
+          },
+          {
+            "score": 100,
+            "amount": 483
+          }
+        ]
+      }
+    },
+    {
+      "id": 107622,
+      "title": {
+        "romaji": "Kakegurui Picture Drama",
+        "english": null,
+        "native": "賭ケグルイ"
+      },
+      "format": "SPECIAL",
+      "source": "MANGA",
+      "episodes": 3,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2017,
+        "month": 10,
+        "day": 13
+      },
+      "endDate": {
+        "year": 2017,
+        "month": 12,
+        "day": 15
+      },
+      "duration": 3,
+      "averageScore": 70,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2017,
+      "genres": [
+        "Comedy"
+      ],
+      "favourites": 239,
+      "popularity": 20492,
+      "studios": {
+        "nodes": [
+          {
+            "id": 569,
+            "name": "MAPPA",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 84
+          },
+          {
+            "score": 20,
+            "amount": 68
+          },
+          {
+            "score": 30,
+            "amount": 144
+          },
+          {
+            "score": 40,
+            "amount": 283
+          },
+          {
+            "score": 50,
+            "amount": 649
+          },
+          {
+            "score": 60,
+            "amount": 1140
+          },
+          {
+            "score": 70,
+            "amount": 1437
+          },
+          {
+            "score": 80,
+            "amount": 1209
+          },
+          {
+            "score": 90,
+            "amount": 737
+          },
+          {
+            "score": 100,
+            "amount": 993
+          }
+        ]
+      }
+    },
+    {
+      "id": 20455,
+      "title": {
+        "romaji": "SoniAni: SUPER SONICO THE ANIMATION",
+        "english": "Soni-Ani: SUPER SONICO THE ANIMATION",
+        "native": "そにアニ -SUPER SONICO THE ANIMATION-"
+      },
+      "format": "TV",
+      "source": "ORIGINAL",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2014,
+        "month": 1,
+        "day": 6
+      },
+      "endDate": {
+        "year": 2014,
+        "month": 3,
+        "day": 24
+      },
+      "duration": 24,
+      "averageScore": 56,
+      "isAdult": false,
+      "season": "WINTER",
+      "seasonYear": 2014,
+      "genres": [
+        "Comedy",
+        "Music",
+        "Slice of Life"
+      ],
+      "favourites": 168,
+      "popularity": 20490,
+      "studios": {
+        "nodes": [
+          {
+            "id": 314,
+            "name": "WHITE FOX",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 459,
+            "name": "Nitroplus",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 376,
+            "name": "Sentai Filmworks",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 30,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 20,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 284
+          },
+          {
+            "score": 20,
+            "amount": 263
+          },
+          {
+            "score": 30,
+            "amount": 477
+          },
+          {
+            "score": 40,
+            "amount": 743
+          },
+          {
+            "score": 50,
+            "amount": 1157
+          },
+          {
+            "score": 60,
+            "amount": 1343
+          },
+          {
+            "score": 70,
+            "amount": 1142
+          },
+          {
+            "score": 80,
+            "amount": 524
+          },
+          {
+            "score": 90,
+            "amount": 364
+          },
+          {
+            "score": 100,
+            "amount": 229
+          }
+        ]
+      }
+    },
+    {
+      "id": 19117,
+      "title": {
+        "romaji": "Toaru Hikuushi e no Koiuta",
+        "english": "The Pilot's Love Song",
+        "native": "とある飛空士への恋歌"
+      },
+      "format": "TV",
+      "source": "LIGHT_NOVEL",
+      "episodes": 13,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2014,
+        "month": 1,
+        "day": 6
+      },
+      "endDate": {
+        "year": 2014,
+        "month": 3,
+        "day": 31
+      },
+      "duration": 24,
+      "averageScore": 68,
+      "isAdult": false,
+      "season": "WINTER",
+      "seasonYear": 2014,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Romance"
+      ],
+      "favourites": 154,
+      "popularity": 20484,
+      "studios": {
+        "nodes": [
+          {
+            "id": 73,
+            "name": "TMS Entertainment",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 23,
+            "name": "Bandai Visual",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6053,
+            "name": "Toaru Hikuushi e no Koiuta Partners",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6424,
+            "name": "Sammy",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6238,
+            "name": "3xCube",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 82,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 14,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 21,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 45
+          },
+          {
+            "score": 20,
+            "amount": 78
+          },
+          {
+            "score": 30,
+            "amount": 179
+          },
+          {
+            "score": 40,
+            "amount": 314
+          },
+          {
+            "score": 50,
+            "amount": 734
+          },
+          {
+            "score": 60,
+            "amount": 1317
+          },
+          {
+            "score": 70,
+            "amount": 2135
+          },
+          {
+            "score": 80,
+            "amount": 1577
+          },
+          {
+            "score": 90,
+            "amount": 648
+          },
+          {
+            "score": 100,
+            "amount": 386
+          }
+        ]
+      }
+    },
+    {
+      "id": 100294,
+      "title": {
+        "romaji": "Quanzhi Fashi 2",
+        "english": "Full-Time Magister S2",
+        "native": "全职法师 第2季"
+      },
+      "format": "ONA",
+      "source": "OTHER",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2017,
+        "month": 9,
+        "day": 15
+      },
+      "endDate": {
+        "year": 2017,
+        "month": 12,
+        "day": 1
+      },
+      "duration": 18,
+      "averageScore": 65,
+      "isAdult": false,
+      "season": null,
+      "seasonYear": null,
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Romance"
+      ],
+      "favourites": 232,
+      "popularity": 20482,
+      "studios": {
+        "nodes": [
+          {
+            "id": 6162,
+            "name": "Foch",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 18,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 5,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 91
+          },
+          {
+            "score": 20,
+            "amount": 101
+          },
+          {
+            "score": 30,
+            "amount": 225
+          },
+          {
+            "score": 40,
+            "amount": 394
+          },
+          {
+            "score": 50,
+            "amount": 865
+          },
+          {
+            "score": 60,
+            "amount": 1629
+          },
+          {
+            "score": 70,
+            "amount": 2060
+          },
+          {
+            "score": 80,
+            "amount": 1181
+          },
+          {
+            "score": 90,
+            "amount": 625
+          },
+          {
+            "score": 100,
+            "amount": 456
+          }
+        ]
+      }
+    },
+    {
+      "id": 21704,
+      "title": {
+        "romaji": "Bananya",
+        "english": "Bananya",
+        "native": "ばなにゃ"
+      },
+      "format": "TV_SHORT",
+      "source": "OTHER",
+      "episodes": 13,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2016,
+        "month": 7,
+        "day": 4
+      },
+      "endDate": {
+        "year": 2016,
+        "month": 9,
+        "day": 26
+      },
+      "duration": 3,
+      "averageScore": 63,
+      "isAdult": false,
+      "season": "SUMMER",
+      "seasonYear": 2016,
+      "genres": [
+        "Comedy",
+        "Fantasy",
+        "Slice of Life"
+      ],
+      "favourites": 212,
+      "popularity": 20469,
+      "studios": {
+        "nodes": [
+          {
+            "id": 73,
+            "name": "TMS Entertainment",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 400,
+            "name": "Gathering",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 15,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 9,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 3,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 2,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 194
+          },
+          {
+            "score": 20,
+            "amount": 228
+          },
+          {
+            "score": 30,
+            "amount": 419
+          },
+          {
+            "score": 40,
+            "amount": 583
+          },
+          {
+            "score": 50,
+            "amount": 1810
+          },
+          {
+            "score": 60,
+            "amount": 2163
+          },
+          {
+            "score": 70,
+            "amount": 1924
+          },
+          {
+            "score": 80,
+            "amount": 937
+          },
+          {
+            "score": 90,
+            "amount": 770
+          },
+          {
+            "score": 100,
+            "amount": 1158
+          }
+        ]
+      }
+    },
+    {
+      "id": 20604,
+      "title": {
+        "romaji": "Inugami-san to Nekoyama-san",
+        "english": null,
+        "native": "犬神さんと猫山さん"
+      },
+      "format": "TV_SHORT",
+      "source": "MANGA",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2014,
+        "month": 4,
+        "day": 11
+      },
+      "endDate": {
+        "year": 2014,
+        "month": 6,
+        "day": 26
+      },
+      "duration": 4,
+      "averageScore": 61,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2014,
+      "genres": [
+        "Comedy",
+        "Slice of Life"
+      ],
+      "favourites": 123,
+      "popularity": 20456,
+      "studios": {
+        "nodes": [
+          {
+            "id": 615,
+            "name": "Dream Creation",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 541,
+            "name": "Seven",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 315,
+            "name": "DAX Production",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 8,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 8,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 3,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 2,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 136
+          },
+          {
+            "score": 20,
+            "amount": 180
+          },
+          {
+            "score": 30,
+            "amount": 401
+          },
+          {
+            "score": 40,
+            "amount": 631
+          },
+          {
+            "score": 50,
+            "amount": 1466
+          },
+          {
+            "score": 60,
+            "amount": 2203
+          },
+          {
+            "score": 70,
+            "amount": 2246
+          },
+          {
+            "score": 80,
+            "amount": 1048
+          },
+          {
+            "score": 90,
+            "amount": 534
+          },
+          {
+            "score": 100,
+            "amount": 346
+          }
+        ]
+      }
+    },
+    {
+      "id": 10015,
+      "title": {
+        "romaji": "Yu☆Gi☆Oh! ZEXAL",
+        "english": "Yu-Gi-Oh! Zexal",
+        "native": "遊☆戯☆王ZEXAL"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 73,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2011,
+        "month": 4,
+        "day": 11
+      },
+      "endDate": {
+        "year": 2012,
+        "month": 9,
+        "day": 24
+      },
+      "duration": 25,
+      "averageScore": 63,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2011,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "favourites": 397,
+      "popularity": 20453,
+      "studios": {
+        "nodes": [
+          {
+            "id": 16,
+            "name": "TV Tokyo",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 82,
+            "name": "Marvelous Entertainment",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 85,
+            "name": "Konami",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 139,
+            "name": "NAS",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 206,
+            "name": "Digital Works",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 2524,
+            "name": "4Kids Entertainment",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 36,
+            "name": "Studio Gallop",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 76,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 70,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 29,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 23,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 203
+          },
+          {
+            "score": 20,
+            "amount": 198
+          },
+          {
+            "score": 30,
+            "amount": 394
+          },
+          {
+            "score": 40,
+            "amount": 714
+          },
+          {
+            "score": 50,
+            "amount": 1255
+          },
+          {
+            "score": 60,
+            "amount": 1947
+          },
+          {
+            "score": 70,
+            "amount": 2204
+          },
+          {
+            "score": 80,
+            "amount": 1433
+          },
+          {
+            "score": 90,
+            "amount": 760
+          },
+          {
+            "score": 100,
+            "amount": 508
+          }
+        ]
+      }
+    },
+    {
+      "id": 1486,
+      "title": {
+        "romaji": "Kodomo no Omocha",
+        "english": "Kodocha",
+        "native": "こどものおもちゃ"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 102,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 1996,
+        "month": 4,
+        "day": 5
+      },
+      "endDate": {
+        "year": 1998,
+        "month": 3,
+        "day": 27
+      },
+      "duration": 22,
+      "averageScore": 78,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 1996,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "favourites": 855,
+      "popularity": 20452,
+      "studios": {
+        "nodes": [
+          {
+            "id": 16,
+            "name": "TV Tokyo",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 36,
+            "name": "Studio Gallop",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 139,
+            "name": "NAS",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 144,
+            "name": "Pony Canyon",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 467,
+            "name": "Discotek",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 443,
+          "type": "RATED",
+          "context": "highest rated all time",
+          "allTime": true
+        },
+        {
+          "rank": 3,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 6,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 34
+          },
+          {
+            "score": 20,
+            "amount": 17
+          },
+          {
+            "score": 30,
+            "amount": 43
+          },
+          {
+            "score": 40,
+            "amount": 56
+          },
+          {
+            "score": 50,
+            "amount": 188
+          },
+          {
+            "score": 60,
+            "amount": 334
+          },
+          {
+            "score": 70,
+            "amount": 827
+          },
+          {
+            "score": 80,
+            "amount": 1097
+          },
+          {
+            "score": 90,
+            "amount": 961
+          },
+          {
+            "score": 100,
+            "amount": 884
+          }
+        ]
+      }
+    },
+    {
+      "id": 9981,
+      "title": {
+        "romaji": "Phi Brain: Kami no Puzzle",
+        "english": "Phi-Brain: Puzzle of God",
+        "native": "ファイ・ブレイン 神のパズル"
+      },
+      "format": "TV",
+      "source": "ORIGINAL",
+      "episodes": 25,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2011,
+        "month": 10,
+        "day": 2
+      },
+      "endDate": {
+        "year": 2012,
+        "month": 4,
+        "day": 1
+      },
+      "duration": 25,
+      "averageScore": 67,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2011,
+      "genres": [
+        "Action",
+        "Mystery"
+      ],
+      "favourites": 154,
+      "popularity": 20450,
+      "studios": {
+        "nodes": [
+          {
+            "id": 14,
+            "name": "Sunrise",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 317,
+            "name": "NHK Enterprises",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 376,
+            "name": "Sentai Filmworks",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 58,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 69,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 18,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 21,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 89
+          },
+          {
+            "score": 20,
+            "amount": 69
+          },
+          {
+            "score": 30,
+            "amount": 169
+          },
+          {
+            "score": 40,
+            "amount": 328
+          },
+          {
+            "score": 50,
+            "amount": 697
+          },
+          {
+            "score": 60,
+            "amount": 1121
+          },
+          {
+            "score": 70,
+            "amount": 1959
+          },
+          {
+            "score": 80,
+            "amount": 1402
+          },
+          {
+            "score": 90,
+            "amount": 639
+          },
+          {
+            "score": 100,
+            "amount": 410
+          }
+        ]
+      }
+    },
+    {
+      "id": 20571,
+      "title": {
+        "romaji": "IS: Infinite Stratos 2 - World Purge-hen",
+        "english": null,
+        "native": "IS〈インフィニット・ストラトス〉2 ワールド・パージ編"
+      },
+      "format": "OVA",
+      "source": "LIGHT_NOVEL",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2014,
+        "month": 11,
+        "day": 26
+      },
+      "endDate": {
+        "year": 2014,
+        "month": 11,
+        "day": 26
+      },
+      "duration": 50,
+      "averageScore": 65,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2014,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Ecchi",
+        "Mecha",
+        "Sci-Fi"
+      ],
+      "favourites": 171,
+      "popularity": 20445,
+      "studios": {
+        "nodes": [
+          {
+            "id": 104,
+            "name": "Lantis",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 145,
+            "name": "TBS",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 4418,
+            "name": "8-bit",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 737,
+            "name": "Sony Music Communications",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 739,
+            "name": "Project IS",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 17,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 128
+          },
+          {
+            "score": 20,
+            "amount": 157
+          },
+          {
+            "score": 30,
+            "amount": 273
+          },
+          {
+            "score": 40,
+            "amount": 400
+          },
+          {
+            "score": 50,
+            "amount": 1022
+          },
+          {
+            "score": 60,
+            "amount": 1706
+          },
+          {
+            "score": 70,
+            "amount": 2405
+          },
+          {
+            "score": 80,
+            "amount": 1283
+          },
+          {
+            "score": 90,
+            "amount": 616
+          },
+          {
+            "score": 100,
+            "amount": 497
+          }
+        ]
+      }
+    },
+    {
+      "id": 109928,
+      "title": {
+        "romaji": "Inu-ou",
+        "english": "Inu-Oh",
+        "native": "犬王"
+      },
+      "format": "MOVIE",
+      "source": "OTHER",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2022,
+        "month": 5,
+        "day": 28
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 5,
+        "day": 28
+      },
+      "duration": 97,
+      "averageScore": 78,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2022,
+      "genres": [
+        "Adventure",
+        "Music",
+        "Supernatural"
+      ],
+      "favourites": 562,
+      "popularity": 20428,
+      "studios": {
+        "nodes": [
+          {
+            "id": 6145,
+            "name": "Science SARU",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 517,
+            "name": "Asmik Ace",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 17,
+            "name": "Aniplex",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 164,
+          "type": "RATED",
+          "context": "highest rated all time",
+          "allTime": true
+        },
+        {
+          "rank": 8,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 15,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 18
+          },
+          {
+            "score": 20,
+            "amount": 25
+          },
+          {
+            "score": 30,
+            "amount": 47
+          },
+          {
+            "score": 40,
+            "amount": 65
+          },
+          {
+            "score": 50,
+            "amount": 194
+          },
+          {
+            "score": 60,
+            "amount": 343
+          },
+          {
+            "score": 70,
+            "amount": 962
+          },
+          {
+            "score": 80,
+            "amount": 1548
+          },
+          {
+            "score": 90,
+            "amount": 1570
+          },
+          {
+            "score": 100,
+            "amount": 716
+          }
+        ]
+      }
+    },
+    {
+      "id": 98298,
+      "title": {
+        "romaji": "Pocket Monsters: Kimi ni Kimeta!",
+        "english": "Pokémon the Movie: I Choose You!",
+        "native": "劇場版 ポケットモンスター キミにきめた!"
+      },
+      "format": "MOVIE",
+      "source": "VIDEO_GAME",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2017,
+        "month": 7,
+        "day": 15
+      },
+      "endDate": {
+        "year": 2017,
+        "month": 7,
+        "day": 15
+      },
+      "duration": 97,
+      "averageScore": 70,
+      "isAdult": false,
+      "season": "SUMMER",
+      "seasonYear": 2017,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "favourites": 247,
+      "popularity": 20422,
+      "studios": {
+        "nodes": [
+          {
+            "id": 28,
+            "name": "OLM",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 327,
+            "name": "Takara Tomy",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 35,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 22,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 77
+          },
+          {
+            "score": 20,
+            "amount": 101
+          },
+          {
+            "score": 30,
+            "amount": 207
+          },
+          {
+            "score": 40,
+            "amount": 372
+          },
+          {
+            "score": 50,
+            "amount": 936
+          },
+          {
+            "score": 60,
+            "amount": 1690
+          },
+          {
+            "score": 70,
+            "amount": 3221
+          },
+          {
+            "score": 80,
+            "amount": 2228
+          },
+          {
+            "score": 90,
+            "amount": 1322
+          },
+          {
+            "score": 100,
+            "amount": 789
+          }
+        ]
+      }
+    },
+    {
+      "id": 206521,
+      "title": {
+        "romaji": "World Is Dancing",
+        "english": "The World Is Dancing",
+        "native": "ワールド イズ ダンシング"
+      },
+      "format": "ONA",
+      "source": "MANGA",
+      "episodes": 13,
+      "status": "RELEASING",
+      "startDate": {
+        "year": 2026,
+        "month": 6,
+        "day": 29
+      },
+      "endDate": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "duration": 24,
+      "averageScore": 72,
+      "isAdult": false,
+      "season": "SUMMER",
+      "seasonYear": 2026,
+      "genres": [
+        "Drama"
+      ],
+      "favourites": 172,
+      "popularity": 20417,
+      "studios": {
+        "nodes": [
+          {
+            "id": 109,
+            "name": "Shouchiku",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7805,
+            "name": "Cypic",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 7232,
+            "name": "CyberAgent",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6310,
+            "name": "Cygames",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6715,
+            "name": "Toy's Factory",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7161,
+            "name": "arma bianca",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6259,
+            "name": "TOKYO MX",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6796,
+            "name": "BS Asahi",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7313,
+            "name": "Happinet Media Marketing",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 20,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 25,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 18
+          },
+          {
+            "score": 20,
+            "amount": 8
+          },
+          {
+            "score": 30,
+            "amount": 11
+          },
+          {
+            "score": 40,
+            "amount": 20
+          },
+          {
+            "score": 50,
+            "amount": 91
+          },
+          {
+            "score": 60,
+            "amount": 121
+          },
+          {
+            "score": 70,
+            "amount": 242
+          },
+          {
+            "score": 80,
+            "amount": 325
+          },
+          {
+            "score": 90,
+            "amount": 259
+          },
+          {
+            "score": 100,
+            "amount": 91
+          }
+        ]
+      }
+    },
+    {
+      "id": 731,
+      "title": {
+        "romaji": "Interstella 5555: THE 5TORY OF THE 5ECRET 5TAR 5YSTEM",
+        "english": "Interstella 5555: The 5tory of the 5ecret 5tar 5ystem",
+        "native": "インターステラ5555：THE 5TORY OF THE 5ECRET 5TAR 5YSTEM"
+      },
+      "format": "MOVIE",
+      "source": "ORIGINAL",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2003,
+        "month": 5,
+        "day": 28
+      },
+      "endDate": {
+        "year": 2003,
+        "month": 5,
+        "day": 28
+      },
+      "duration": 67,
+      "averageScore": 77,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2003,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Music",
+        "Sci-Fi"
+      ],
+      "favourites": 669,
+      "popularity": 20415,
+      "studios": {
+        "nodes": [
+          {
+            "id": 18,
+            "name": "Toei Animation",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 815,
+            "name": "EMI",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 213,
+          "type": "RATED",
+          "context": "highest rated all time",
+          "allTime": true
+        },
+        {
+          "rank": 2,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 4,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 43
+          },
+          {
+            "score": 20,
+            "amount": 32
+          },
+          {
+            "score": 30,
+            "amount": 73
+          },
+          {
+            "score": 40,
+            "amount": 115
+          },
+          {
+            "score": 50,
+            "amount": 423
+          },
+          {
+            "score": 60,
+            "amount": 838
+          },
+          {
+            "score": 70,
+            "amount": 2106
+          },
+          {
+            "score": 80,
+            "amount": 2669
+          },
+          {
+            "score": 90,
+            "amount": 1875
+          },
+          {
+            "score": 100,
+            "amount": 1442
+          }
+        ]
+      }
+    },
+    {
+      "id": 10851,
+      "title": {
+        "romaji": "euphoria",
+        "english": null,
+        "native": "euphoria"
+      },
+      "format": "OVA",
+      "source": "VISUAL_NOVEL",
+      "episodes": 6,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2011,
+        "month": 12,
+        "day": 22
+      },
+      "endDate": {
+        "year": 2016,
+        "month": 2,
+        "day": 26
+      },
+      "duration": 30,
+      "averageScore": 53,
+      "isAdult": true,
+      "season": "WINTER",
+      "seasonYear": 2011,
+      "genres": [
+        "Drama",
+        "Hentai",
+        "Psychological"
+      ],
+      "favourites": 505,
+      "popularity": 20409,
+      "studios": {
+        "nodes": [
+          {
+            "id": 767,
+            "name": "Majin",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 1055
+          },
+          {
+            "score": 20,
+            "amount": 592
+          },
+          {
+            "score": 30,
+            "amount": 623
+          },
+          {
+            "score": 40,
+            "amount": 790
+          },
+          {
+            "score": 50,
+            "amount": 1019
+          },
+          {
+            "score": 60,
+            "amount": 1275
+          },
+          {
+            "score": 70,
+            "amount": 1161
+          },
+          {
+            "score": 80,
+            "amount": 802
+          },
+          {
+            "score": 90,
+            "amount": 569
+          },
+          {
+            "score": 100,
+            "amount": 802
+          }
+        ]
+      }
+    },
+    {
+      "id": 21423,
+      "title": {
+        "romaji": "Kuma Miko",
+        "english": "Kumamiko -Girl Meets Bear",
+        "native": "くまみこ"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2016,
+        "month": 4,
+        "day": 3
+      },
+      "endDate": {
+        "year": 2016,
+        "month": 6,
+        "day": 19
+      },
+      "duration": 24,
+      "averageScore": 59,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2016,
+      "genres": [
+        "Comedy",
+        "Slice of Life"
+      ],
+      "favourites": 122,
+      "popularity": 20408,
+      "studios": {
+        "nodes": [
+          {
+            "id": 290,
+            "name": "Kinema Citrus",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6125,
+            "name": "EMT Squared",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 737,
+            "name": "Sony Music Communications",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 238,
+            "name": "AT-X",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 99,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 26,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 191
+          },
+          {
+            "score": 20,
+            "amount": 184
+          },
+          {
+            "score": 30,
+            "amount": 408
+          },
+          {
+            "score": 40,
+            "amount": 728
+          },
+          {
+            "score": 50,
+            "amount": 1230
+          },
+          {
+            "score": 60,
+            "amount": 1640
+          },
+          {
+            "score": 70,
+            "amount": 1908
+          },
+          {
+            "score": 80,
+            "amount": 910
+          },
+          {
+            "score": 90,
+            "amount": 361
+          },
+          {
+            "score": 100,
+            "amount": 189
+          }
+        ]
+      }
+    },
+    {
+      "id": 1722,
+      "title": {
+        "romaji": "Nagasarete Airantou",
+        "english": "Nagasarete Airanto",
+        "native": "ながされて藍蘭島"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 26,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2007,
+        "month": 4,
+        "day": 5
+      },
+      "endDate": {
+        "year": 2007,
+        "month": 9,
+        "day": 27
+      },
+      "duration": 24,
+      "averageScore": 67,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2007,
+      "genres": [
+        "Comedy",
+        "Ecchi",
+        "Fantasy",
+        "Romance"
+      ],
+      "favourites": 259,
+      "popularity": 20378,
+      "studios": {
+        "nodes": [
+          {
+            "id": 91,
+            "name": "feel.",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 721,
+            "name": "GANSIS",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 92,
+            "name": "Starchild Records",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 58,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 38,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 25,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 16,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 69
+          },
+          {
+            "score": 20,
+            "amount": 72
+          },
+          {
+            "score": 30,
+            "amount": 153
+          },
+          {
+            "score": 40,
+            "amount": 283
+          },
+          {
+            "score": 50,
+            "amount": 681
+          },
+          {
+            "score": 60,
+            "amount": 1052
+          },
+          {
+            "score": 70,
+            "amount": 1838
+          },
+          {
+            "score": 80,
+            "amount": 1201
+          },
+          {
+            "score": 90,
+            "amount": 603
+          },
+          {
+            "score": 100,
+            "amount": 404
+          }
+        ]
+      }
+    },
+    {
+      "id": 21265,
+      "title": {
+        "romaji": "Yu☆Gi☆Oh!: THE DARK SIDE OF DIMENSIONS",
+        "english": "Yu-Gi-Oh!: The Dark Side of Dimensions",
+        "native": "遊☆戯☆王 THE DARK SIDE OF DIMENSIONS"
+      },
+      "format": "MOVIE",
+      "source": "MANGA",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2016,
+        "month": 4,
+        "day": 23
+      },
+      "endDate": {
+        "year": 2016,
+        "month": 4,
+        "day": 23
+      },
+      "duration": 130,
+      "averageScore": 73,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2016,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "favourites": 413,
+      "popularity": 20363,
+      "studios": {
+        "nodes": [
+          {
+            "id": 6081,
+            "name": "Studio Dice",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 36,
+            "name": "Studio Gallop",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6444,
+            "name": "Manga Entertainment",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6454,
+            "name": "Madman Entertainment",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 23,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 15,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 58
+          },
+          {
+            "score": 20,
+            "amount": 63
+          },
+          {
+            "score": 30,
+            "amount": 120
+          },
+          {
+            "score": 40,
+            "amount": 267
+          },
+          {
+            "score": 50,
+            "amount": 636
+          },
+          {
+            "score": 60,
+            "amount": 1299
+          },
+          {
+            "score": 70,
+            "amount": 2771
+          },
+          {
+            "score": 80,
+            "amount": 2620
+          },
+          {
+            "score": 90,
+            "amount": 1505
+          },
+          {
+            "score": 100,
+            "amount": 973
+          }
+        ]
+      }
+    },
+    {
+      "id": 101574,
+      "title": {
+        "romaji": "SHIROBAKO Movie",
+        "english": "SHIROBAKO the Movie",
+        "native": "劇場版 SHIROBAKO"
+      },
+      "format": "MOVIE",
+      "source": "ORIGINAL",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2020,
+        "month": 2,
+        "day": 29
+      },
+      "endDate": {
+        "year": 2020,
+        "month": 2,
+        "day": 29
+      },
+      "duration": 120,
+      "averageScore": 76,
+      "isAdult": false,
+      "season": "WINTER",
+      "seasonYear": 2020,
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Slice of Life"
+      ],
+      "favourites": 146,
+      "popularity": 20358,
+      "studios": {
+        "nodes": [
+          {
+            "id": 132,
+            "name": "P.A.WORKS",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6064,
+            "name": "infinite",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 14,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 17,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 15
+          },
+          {
+            "score": 20,
+            "amount": 11
+          },
+          {
+            "score": 30,
+            "amount": 40
+          },
+          {
+            "score": 40,
+            "amount": 52
+          },
+          {
+            "score": 50,
+            "amount": 220
+          },
+          {
+            "score": 60,
+            "amount": 449
+          },
+          {
+            "score": 70,
+            "amount": 1400
+          },
+          {
+            "score": 80,
+            "amount": 1811
+          },
+          {
+            "score": 90,
+            "amount": 1086
+          },
+          {
+            "score": 100,
+            "amount": 383
+          }
+        ]
+      }
+    },
+    {
+      "id": 10572,
+      "title": {
+        "romaji": "Ro-Kyu-Bu!",
+        "english": "Ro-Kyu-Bu ~ Fast Break!",
+        "native": "ロウきゅーぶ!"
+      },
+      "format": "TV",
+      "source": "LIGHT_NOVEL",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2011,
+        "month": 7,
+        "day": 1
+      },
+      "endDate": {
+        "year": 2011,
+        "month": 9,
+        "day": 23
+      },
+      "duration": 24,
+      "averageScore": 64,
+      "isAdult": false,
+      "season": "SUMMER",
+      "seasonYear": 2011,
+      "genres": [
+        "Comedy",
+        "Ecchi",
+        "Sports"
+      ],
+      "favourites": 146,
+      "popularity": 20350,
+      "studios": {
+        "nodes": [
+          {
+            "id": 306,
+            "name": "Magic Capsule",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 4399,
+            "name": "project No.9",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 681,
+            "name": "ASCII Media Works",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 460,
+            "name": "KLOCKWORX",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7201,
+            "name": "Warner Home Video & Digital Distribution",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 73,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 71,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 15,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 16,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 181
+          },
+          {
+            "score": 20,
+            "amount": 154
+          },
+          {
+            "score": 30,
+            "amount": 298
+          },
+          {
+            "score": 40,
+            "amount": 464
+          },
+          {
+            "score": 50,
+            "amount": 878
+          },
+          {
+            "score": 60,
+            "amount": 1433
+          },
+          {
+            "score": 70,
+            "amount": 1957
+          },
+          {
+            "score": 80,
+            "amount": 1118
+          },
+          {
+            "score": 90,
+            "amount": 612
+          },
+          {
+            "score": 100,
+            "amount": 401
+          }
+        ]
+      }
+    },
+    {
+      "id": 2397,
+      "title": {
+        "romaji": "Digimon Adventure: Bokura no War Game!",
+        "english": "Digimon: Our War Game",
+        "native": "デジモンアドベンチャー ぼくらのウォーゲーム!"
+      },
+      "format": "MOVIE",
+      "source": "ORIGINAL",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2000,
+        "month": 3,
+        "day": 4
+      },
+      "endDate": {
+        "year": 2000,
+        "month": 3,
+        "day": 4
+      },
+      "duration": 41,
+      "averageScore": 76,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2000,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "favourites": 613,
+      "popularity": 20349,
+      "studios": {
+        "nodes": [
+          {
+            "id": 18,
+            "name": "Toei Animation",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 256,
+          "type": "RATED",
+          "context": "highest rated all time",
+          "allTime": true
+        },
+        {
+          "rank": 5,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 7,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 32
+          },
+          {
+            "score": 20,
+            "amount": 21
+          },
+          {
+            "score": 30,
+            "amount": 73
+          },
+          {
+            "score": 40,
+            "amount": 133
+          },
+          {
+            "score": 50,
+            "amount": 504
+          },
+          {
+            "score": 60,
+            "amount": 1015
+          },
+          {
+            "score": 70,
+            "amount": 2642
+          },
+          {
+            "score": 80,
+            "amount": 3131
+          },
+          {
+            "score": 90,
+            "amount": 2032
+          },
+          {
+            "score": 100,
+            "amount": 1297
+          }
+        ]
+      }
+    },
+    {
+      "id": 112023,
+      "title": {
+        "romaji": "Luo Xiaohei Zhan Ji (Movie)",
+        "english": "The Legend of Hei",
+        "native": "罗小黑战记大电影"
+      },
+      "format": "MOVIE",
+      "source": "ORIGINAL",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2019,
+        "month": 9,
+        "day": 7
+      },
+      "endDate": {
+        "year": 2019,
+        "month": 9,
+        "day": 7
+      },
+      "duration": 101,
+      "averageScore": 81,
+      "isAdult": false,
+      "season": null,
+      "seasonYear": null,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "favourites": 802,
+      "popularity": 20348,
+      "studios": {
+        "nodes": [
+          {
+            "id": 6426,
+            "name": "HMCH",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6534,
+            "name": "Joy Pictures",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 67,
+          "type": "RATED",
+          "context": "highest rated all time",
+          "allTime": true
+        },
+        {
+          "rank": 7,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 29,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 22
+          },
+          {
+            "score": 20,
+            "amount": 7
+          },
+          {
+            "score": 30,
+            "amount": 24
+          },
+          {
+            "score": 40,
+            "amount": 69
+          },
+          {
+            "score": 50,
+            "amount": 122
+          },
+          {
+            "score": 60,
+            "amount": 215
+          },
+          {
+            "score": 70,
+            "amount": 693
+          },
+          {
+            "score": 80,
+            "amount": 1380
+          },
+          {
+            "score": 90,
+            "amount": 1547
+          },
+          {
+            "score": 100,
+            "amount": 1064
+          }
+        ]
+      }
+    },
+    {
+      "id": 208,
+      "title": {
+        "romaji": "R.O.D -READ OR DIE-",
+        "english": "R.O.D - READ OR DIE",
+        "native": "R.O.D -READ OR DIE-"
+      },
+      "format": "OVA",
+      "source": "LIGHT_NOVEL",
+      "episodes": 3,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2001,
+        "month": 5,
+        "day": 23
+      },
+      "endDate": {
+        "year": 2002,
+        "month": 2,
+        "day": 6
+      },
+      "duration": 33,
+      "averageScore": 75,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2001,
+      "genres": [
+        "Action",
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "favourites": 1110,
+      "popularity": 20328,
+      "studios": {
+        "nodes": [
+          {
+            "id": 17,
+            "name": "Aniplex",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 37,
+            "name": "Studio DEEN",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 149,
+            "name": "SME Visual Works",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 493,
+            "name": "Aniplex of America",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6444,
+            "name": "Manga Entertainment",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 2,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 2,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 36
+          },
+          {
+            "score": 20,
+            "amount": 28
+          },
+          {
+            "score": 30,
+            "amount": 60
+          },
+          {
+            "score": 40,
+            "amount": 145
+          },
+          {
+            "score": 50,
+            "amount": 439
+          },
+          {
+            "score": 60,
+            "amount": 809
+          },
+          {
+            "score": 70,
+            "amount": 1776
+          },
+          {
+            "score": 80,
+            "amount": 1708
+          },
+          {
+            "score": 90,
+            "amount": 1248
+          },
+          {
+            "score": 100,
+            "amount": 982
+          }
+        ]
+      }
+    },
+    {
+      "id": 146921,
+      "title": {
+        "romaji": "Arifureta Shokugyou de Sekai Saikyou: Maboroshi no Bouken to Kiseki no Kaigou",
+        "english": "Arifureta - From Commonplace to World's Strongest: The Miraculous Meeting and the Phantasmagorical Adventure",
+        "native": "ありふれた職業で世界最強 幻の冒険と奇跡の邂逅"
+      },
+      "format": "OVA",
+      "source": "LIGHT_NOVEL",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2022,
+        "month": 9,
+        "day": 25
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 9,
+        "day": 25
+      },
+      "duration": 40,
+      "averageScore": 71,
+      "isAdult": false,
+      "season": "SUMMER",
+      "seasonYear": 2022,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Psychological"
+      ],
+      "favourites": 339,
+      "popularity": 20320,
+      "studios": {
+        "nodes": [
+          {
+            "id": 7010,
+            "name": "OVERLAP",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 163,
+            "name": "Asread",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6638,
+            "name": "studio MOTHER",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 6331,
+            "name": "Bandai Namco Arts",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 775,
+            "name": "Bushiroad",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6612,
+            "name": "FuRyu",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 777,
+            "name": "Hakuhodo DY Music & Pictures",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 882,
+            "name": "Toranoana",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6758,
+            "name": "Sony Music Solutions",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 238,
+            "name": "AT-X",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 8,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 3,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 55
+          },
+          {
+            "score": 20,
+            "amount": 44
+          },
+          {
+            "score": 30,
+            "amount": 82
+          },
+          {
+            "score": 40,
+            "amount": 151
+          },
+          {
+            "score": 50,
+            "amount": 436
+          },
+          {
+            "score": 60,
+            "amount": 874
+          },
+          {
+            "score": 70,
+            "amount": 1812
+          },
+          {
+            "score": 80,
+            "amount": 1111
+          },
+          {
+            "score": 90,
+            "amount": 742
+          },
+          {
+            "score": 100,
+            "amount": 541
+          }
+        ]
+      }
+    },
+    {
+      "id": 132,
+      "title": {
+        "romaji": "GetBackers: Dakkanya",
+        "english": "GetBackers",
+        "native": "GetBackers 奪還屋"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 49,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2002,
+        "month": 10,
+        "day": 5
+      },
+      "endDate": {
+        "year": 2003,
+        "month": 9,
+        "day": 20
+      },
+      "duration": 24,
+      "averageScore": 71,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2002,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Drama",
+        "Mystery"
+      ],
+      "favourites": 322,
+      "popularity": 20285,
+      "studios": {
+        "nodes": [
+          {
+            "id": 37,
+            "name": "Studio DEEN",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 145,
+            "name": "TBS",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 159,
+            "name": "Kodansha",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 160,
+            "name": "Rondo Robe",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 211,
+            "name": "Rakuonsha",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 376,
+            "name": "Sentai Filmworks",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 14,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 20,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 7,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 6,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 51
+          },
+          {
+            "score": 20,
+            "amount": 38
+          },
+          {
+            "score": 30,
+            "amount": 74
+          },
+          {
+            "score": 40,
+            "amount": 158
+          },
+          {
+            "score": 50,
+            "amount": 440
+          },
+          {
+            "score": 60,
+            "amount": 749
+          },
+          {
+            "score": 70,
+            "amount": 1618
+          },
+          {
+            "score": 80,
+            "amount": 1385
+          },
+          {
+            "score": 90,
+            "amount": 701
+          },
+          {
+            "score": 100,
+            "amount": 428
+          }
+        ]
+      }
+    },
+    {
+      "id": 179992,
+      "title": {
+        "romaji": "Kikaijikake no Marie",
+        "english": "Mechanical Marie",
+        "native": "機械じかけのマリー"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2025,
+        "month": 10,
+        "day": 5
+      },
+      "endDate": {
+        "year": 2025,
+        "month": 12,
+        "day": 21
+      },
+      "duration": 24,
+      "averageScore": 67,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2025,
+      "genres": [
+        "Action",
+        "Comedy",
+        "Romance",
+        "Sci-Fi"
+      ],
+      "favourites": 267,
+      "popularity": 20283,
+      "studios": {
+        "nodes": [
+          {
+            "id": 6117,
+            "name": "Zero-G",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 7225,
+            "name": "Liber",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 76,
+            "name": "Yomiuri TV",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 144,
+            "name": "Pony Canyon",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 148,
+            "name": "Hakusensha",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6117,
+            "name": "Zero-G",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 62,
+            "name": "Shogakukan-Shueisha Productions",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 843,
+            "name": "BS Fuji",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 460,
+            "name": "KLOCKWORX",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6739,
+            "name": "Amusement Media Academy",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 7236,
+            "name": "Production Ace",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 27,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 26,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 86
+          },
+          {
+            "score": 20,
+            "amount": 44
+          },
+          {
+            "score": 30,
+            "amount": 115
+          },
+          {
+            "score": 40,
+            "amount": 187
+          },
+          {
+            "score": 50,
+            "amount": 449
+          },
+          {
+            "score": 60,
+            "amount": 902
+          },
+          {
+            "score": 70,
+            "amount": 1285
+          },
+          {
+            "score": 80,
+            "amount": 778
+          },
+          {
+            "score": 90,
+            "amount": 538
+          },
+          {
+            "score": 100,
+            "amount": 267
+          }
+        ]
+      }
+    },
+    {
+      "id": 21235,
+      "title": {
+        "romaji": "Kuroko no Basket: Saikou no Present Desu",
+        "english": "Kuroko's Basketball: The Greatest Present",
+        "native": "黒子のバスケ ~最高のプレゼントです~"
+      },
+      "format": "SPECIAL",
+      "source": "MANGA",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2015,
+        "month": 12,
+        "day": 25
+      },
+      "endDate": {
+        "year": 2015,
+        "month": 12,
+        "day": 25
+      },
+      "duration": 23,
+      "averageScore": 78,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2015,
+      "genres": [
+        "Comedy",
+        "Sports"
+      ],
+      "favourites": 194,
+      "popularity": 20265,
+      "studios": {
+        "nodes": [
+          {
+            "id": 10,
+            "name": "Production I.G",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 45
+          },
+          {
+            "score": 20,
+            "amount": 14
+          },
+          {
+            "score": 30,
+            "amount": 45
+          },
+          {
+            "score": 40,
+            "amount": 76
+          },
+          {
+            "score": 50,
+            "amount": 386
+          },
+          {
+            "score": 60,
+            "amount": 683
+          },
+          {
+            "score": 70,
+            "amount": 1934
+          },
+          {
+            "score": 80,
+            "amount": 2865
+          },
+          {
+            "score": 90,
+            "amount": 1925
+          },
+          {
+            "score": 100,
+            "amount": 1507
+          }
+        ]
+      }
+    },
+    {
+      "id": 204066,
+      "title": {
+        "romaji": "Jujutsu Kaisen: Shibuya Jihen Tokubetsu Henshuu-ban x Shimetsu Kaiyuu Senkou Jouei",
+        "english": "JUJUTSU KAISEN: Execution -Shibuya Incident x The Culling Game Begins-",
+        "native": "呪術廻戦『渋谷事変 特別編集版』×『死滅回游 先行上映』"
+      },
+      "format": "MOVIE",
+      "source": "MANGA",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2025,
+        "month": 11,
+        "day": 7
+      },
+      "endDate": {
+        "year": 2025,
+        "month": 11,
+        "day": 7
+      },
+      "duration": 88,
+      "averageScore": 76,
+      "isAdult": false,
+      "season": "FALL",
+      "seasonYear": 2025,
+      "genres": [
+        "Action",
+        "Drama",
+        "Supernatural"
+      ],
+      "favourites": 377,
+      "popularity": 20259,
+      "studios": {
+        "nodes": [
+          {
+            "id": 569,
+            "name": "MAPPA",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 783,
+            "name": "GKIDS",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 252,
+          "type": "RATED",
+          "context": "highest rated all time",
+          "allTime": true
+        },
+        {
+          "rank": 13,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 10,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 63
+          },
+          {
+            "score": 20,
+            "amount": 23
+          },
+          {
+            "score": 30,
+            "amount": 63
+          },
+          {
+            "score": 40,
+            "amount": 76
+          },
+          {
+            "score": 50,
+            "amount": 236
+          },
+          {
+            "score": 60,
+            "amount": 466
+          },
+          {
+            "score": 70,
+            "amount": 1338
+          },
+          {
+            "score": 80,
+            "amount": 1739
+          },
+          {
+            "score": 90,
+            "amount": 1302
+          },
+          {
+            "score": 100,
+            "amount": 805
+          }
+        ]
+      }
+    },
+    {
+      "id": 514,
+      "title": {
+        "romaji": "Cossette no Shouzou",
+        "english": "Le Portrait de Petit Cossette",
+        "native": "コゼットの肖像"
+      },
+      "format": "OVA",
+      "source": "ORIGINAL",
+      "episodes": 3,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2004,
+        "month": 4,
+        "day": 11
+      },
+      "endDate": {
+        "year": 2004,
+        "month": 12,
+        "day": 22
+      },
+      "duration": 36,
+      "averageScore": 65,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2004,
+      "genres": [
+        "Drama",
+        "Horror",
+        "Psychological",
+        "Romance",
+        "Supernatural"
+      ],
+      "favourites": 314,
+      "popularity": 20257,
+      "studios": {
+        "nodes": [
+          {
+            "id": 17,
+            "name": "Aniplex",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 101,
+            "name": "Studio Hibari",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 39,
+            "name": "Daume",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 12,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 3,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 104
+          },
+          {
+            "score": 20,
+            "amount": 100
+          },
+          {
+            "score": 30,
+            "amount": 206
+          },
+          {
+            "score": 40,
+            "amount": 344
+          },
+          {
+            "score": 50,
+            "amount": 752
+          },
+          {
+            "score": 60,
+            "amount": 1177
+          },
+          {
+            "score": 70,
+            "amount": 1467
+          },
+          {
+            "score": 80,
+            "amount": 1082
+          },
+          {
+            "score": 90,
+            "amount": 582
+          },
+          {
+            "score": 100,
+            "amount": 362
+          }
+        ]
+      }
+    },
+    {
+      "id": 834,
+      "title": {
+        "romaji": "BLEACH: The Sealed Sword Frenzy",
+        "english": null,
+        "native": "BLEACH The Sealed Sword Frenzy"
+      },
+      "format": "SPECIAL",
+      "source": "MANGA",
+      "episodes": 1,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2006,
+        "month": 3,
+        "day": 23
+      },
+      "endDate": {
+        "year": 2006,
+        "month": 3,
+        "day": 23
+      },
+      "duration": 33,
+      "averageScore": 65,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2006,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Supernatural"
+      ],
+      "favourites": 164,
+      "popularity": 20222,
+      "studios": {
+        "nodes": [
+          {
+            "id": 1,
+            "name": "Studio Pierrot",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 16,
+            "name": "TV Tokyo",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 99
+          },
+          {
+            "score": 20,
+            "amount": 124
+          },
+          {
+            "score": 30,
+            "amount": 238
+          },
+          {
+            "score": 40,
+            "amount": 410
+          },
+          {
+            "score": 50,
+            "amount": 1131
+          },
+          {
+            "score": 60,
+            "amount": 1959
+          },
+          {
+            "score": 70,
+            "amount": 2389
+          },
+          {
+            "score": 80,
+            "amount": 1132
+          },
+          {
+            "score": 90,
+            "amount": 575
+          },
+          {
+            "score": 100,
+            "amount": 569
+          }
+        ]
+      }
+    },
+    {
+      "id": 167142,
+      "title": {
+        "romaji": "Your Forma",
+        "english": "YOUR FORMA",
+        "native": "ユア・フォルマ"
+      },
+      "format": "TV",
+      "source": "LIGHT_NOVEL",
+      "episodes": 13,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2025,
+        "month": 4,
+        "day": 2
+      },
+      "endDate": {
+        "year": 2025,
+        "month": 6,
+        "day": 25
+      },
+      "duration": 24,
+      "averageScore": 59,
+      "isAdult": false,
+      "season": "SPRING",
+      "seasonYear": 2025,
+      "genres": [
+        "Action",
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "favourites": 182,
+      "popularity": 20197,
+      "studios": {
+        "nodes": [
+          {
+            "id": 6199,
+            "name": "Twin Engine",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6142,
+            "name": "Geno Studio",
+            "isAnimationStudio": true
+          },
+          {
+            "id": 55,
+            "name": "TV Asahi",
+            "isAnimationStudio": false
+          },
+          {
+            "id": 6389,
+            "name": "bilibili",
+            "isAnimationStudio": false
+          }
+        ]
+      },
+      "rankings": [],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 57
+          },
+          {
+            "score": 20,
+            "amount": 61
+          },
+          {
+            "score": 30,
+            "amount": 147
+          },
+          {
+            "score": 40,
+            "amount": 318
+          },
+          {
+            "score": 50,
+            "amount": 525
+          },
+          {
+            "score": 60,
+            "amount": 838
+          },
+          {
+            "score": 70,
+            "amount": 806
+          },
+          {
+            "score": 80,
+            "amount": 387
+          },
+          {
+            "score": 90,
+            "amount": 192
+          },
+          {
+            "score": 100,
+            "amount": 81
+          }
+        ]
+      }
+    },
+    {
+      "id": 16890,
+      "title": {
+        "romaji": "Makai Ouji: devils and realist",
+        "english": null,
+        "native": "魔界王子 devils and realist"
+      },
+      "format": "TV",
+      "source": "MANGA",
+      "episodes": 12,
+      "status": "FINISHED",
+      "startDate": {
+        "year": 2013,
+        "month": 6,
+        "day": 30
+      },
+      "endDate": {
+        "year": 2013,
+        "month": 9,
+        "day": 23
+      },
+      "duration": 24,
+      "averageScore": 64,
+      "isAdult": false,
+      "season": "SUMMER",
+      "seasonYear": 2013,
+      "genres": [
+        "Comedy",
+        "Fantasy",
+        "Mystery",
+        "Supernatural"
+      ],
+      "favourites": 208,
+      "popularity": 20194,
+      "studios": {
+        "nodes": [
+          {
+            "id": 95,
+            "name": "Doga Kobo",
+            "isAnimationStudio": true
+          }
+        ]
+      },
+      "rankings": [
+        {
+          "rank": 91,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 83,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        },
+        {
+          "rank": 24,
+          "type": "RATED",
+          "context": "highest rated",
+          "allTime": false
+        },
+        {
+          "rank": 21,
+          "type": "POPULAR",
+          "context": "most popular",
+          "allTime": false
+        }
+      ],
+      "stats": {
+        "scoreDistribution": [
+          {
+            "score": 10,
+            "amount": 110
+          },
+          {
+            "score": 20,
+            "amount": 107
+          },
+          {
+            "score": 30,
+            "amount": 237
+          },
+          {
+            "score": 40,
+            "amount": 368
+          },
+          {
+            "score": 50,
+            "amount": 794
+          },
+          {
+            "score": 60,
+            "amount": 1279
+          },
+          {
+            "score": 70,
+            "amount": 1661
+          },
+          {
+            "score": 80,
+            "amount": 964
+          },
+          {
+            "score": 90,
+            "amount": 528
+          },
+          {
+            "score": 100,
+            "amount": 289
+          }
+        ]
+      }
+    }
+  ]
+}

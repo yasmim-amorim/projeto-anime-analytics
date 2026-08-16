@@ -1,11 +1,7 @@
--- Camada analítica em SQL (Etapa 6 do plano de ação — projeto anime)
--- Views + queries analíticas sobre o schema de sql/ddl.sql
+-- Views e queries analíticas sobre o schema de ddl.sql
 
--- ============================================================
--- View base: métricas mais recentes de cada anime
--- (fato_anime_metricas pode acumular várias coletas por anime_id
---  ao longo do tempo; as views analíticas trabalham sobre a "foto" mais atual)
--- ============================================================
+-- Métricas mais recentes de cada anime (fato_anime_metricas pode acumular
+-- várias coletas por anime_id ao longo do tempo).
 CREATE OR REPLACE VIEW vw_metricas_atuais AS
 SELECT f.*
 FROM (
@@ -17,9 +13,7 @@ FROM (
 WHERE rn = 1;
 
 
--- ============================================================
--- 1. Nota média por gênero
--- ============================================================
+-- Nota média por gênero
 CREATE OR REPLACE VIEW vw_nota_media_genero AS
 SELECT
     g.genero_id,
@@ -35,9 +29,7 @@ GROUP BY g.genero_id, g.nome_genero
 ORDER BY nota_media DESC;
 
 
--- ============================================================
--- 2. Ranking de estúdios: volume x qualidade média
--- ============================================================
+-- Ranking de estúdios: volume de produções x nota média
 CREATE OR REPLACE VIEW vw_ranking_estudios AS
 SELECT
     e.estudio_id,
@@ -53,9 +45,7 @@ GROUP BY e.estudio_id, e.nome_estudio
 ORDER BY qtd_animes DESC, nota_media DESC;
 
 
--- ============================================================
--- 3. Engajamento do público por gênero (membros/favoritos, fidelização)
--- ============================================================
+-- Engajamento do público por gênero (membros/favoritos, fidelização)
 CREATE OR REPLACE VIEW vw_engajamento_genero AS
 SELECT
     g.genero_id,
@@ -71,9 +61,7 @@ GROUP BY g.genero_id, g.nome_genero
 ORDER BY proporcao_favoritos_por_membro DESC;
 
 
--- ============================================================
--- 4. Score x popularidade por anime (base para o "cult vs hype")
--- ============================================================
+-- Score e popularidade por anime, com gêneros agregados
 CREATE OR REPLACE VIEW vw_score_vs_popularidade AS
 SELECT
     a.anime_id,
@@ -94,11 +82,7 @@ LEFT JOIN dim_genero g ON g.genero_id = pg.genero_id
 GROUP BY a.anime_id, a.titulo, a.tipo, a.fonte, a.ano, m.score, m.scored_by, m.popularity, m.members, m.favorites;
 
 
--- ============================================================
--- Queries analíticas avuls as (window functions)
--- ============================================================
-
--- 5. Ranking de animes dentro de cada gênero, por nota (RANK())
+-- Ranking de animes dentro de cada gênero, por nota
 SELECT
     g.nome_genero,
     a.titulo,
@@ -110,7 +94,7 @@ JOIN dim_anime a ON a.anime_id = pg.anime_id
 JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
 ORDER BY g.nome_genero, posicao_no_genero;
 
--- 6. Faixas de popularidade (quartis) via NTILE()
+-- Faixas de popularidade (quartis)
 SELECT
     a.titulo,
     m.popularity,
@@ -120,8 +104,7 @@ FROM dim_anime a
 JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
 ORDER BY quartil_popularidade, m.members DESC;
 
--- 7. "Cult" (nota alta, popularidade baixa) vs "Hype" (popularidade alta, nota mediana)
---    usa NTILE por popularidade e nota pra classificar cada anime nos dois eixos
+-- Classificação de cada anime por nota e popularidade relativas (tercis)
 WITH classificado AS (
     SELECT
         a.titulo,

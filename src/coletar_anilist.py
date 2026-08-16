@@ -1,13 +1,5 @@
 """
-Script de coleta da API AniList (Etapa 2 do plano de ação — projeto anime).
-
-Substitui a coleta via Jikan (arquivada em src/historico/coletar_jikan.py):
-a Jikan raspa o MyAnimeList ao vivo a cada request sem cache e vinha falhando
-com 504 na quase totalidade das páginas (diagnóstico em docs/historico/notas_api_jikan.md).
-A AniList serve os dados a partir do próprio banco (não faz scraping sob demanda),
-então não sofre desse problema.
-
-Coleta os animes mais populares (top ~1.500) via GraphQL (graphql.anilist.co),
+Coleta dos animes mais populares (top 5.000) via GraphQL (graphql.anilist.co),
 salvando cada página de resposta bruta em data/raw/anilist/<data>/. Não exige
 autenticação, mas tem rate limit de 30 requisições/minuto (ver header
 X-RateLimit-Limit da resposta).
@@ -24,7 +16,8 @@ URL = "https://graphql.anilist.co"
 PASTA_SAIDA = Path("data/raw/anilist") / date.today().isoformat()
 
 PER_PAGE = 50
-LIMITE_PAGINAS = 30          # 30 páginas x 50 itens = ~1.500 animes
+LIMITE_PAGINAS = 100         # 100 páginas x 50 itens = 5.000 animes (teto de profundidade
+                              # de paginação da API AniList: page * perPage <= 5000)
 ESPACO_ENTRE_CHAMADAS = 2.2  # segundos — mantém margem sob o limite de 30 req/min
 
 MAX_TENTATIVAS = 3
