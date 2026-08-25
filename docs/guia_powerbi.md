@@ -15,7 +15,7 @@ Guia de referência para montar o dashboard no Power BI Desktop, conectado ao ba
 3. **Banco de dados**: `anime_analytics`
 4. Modo de conectividade de dados: **Importar**
 5. Ao pedir credenciais: usuário `postgres`, senha (a mesma do `.env`).
-6. No **Navegador**, marque as 6 tabelas (`dim_anime`, `dim_genero`, `dim_estudio`, `ponte_anime_genero`, `ponte_anime_estudio`, `fato_anime_metricas`) **e as 9 views prontas** listadas abaixo. **Carregar**.
+6. No **Navegador**, marque as 6 tabelas (`dim_anime`, `dim_genero`, `dim_estudio`, `ponte_anime_genero`, `ponte_anime_estudio`, `fato_anime_metricas`) **e as 11 views prontas** listadas abaixo. **Carregar**.
 
 | View | O que traz | Linhas |
 |---|---|---|
@@ -28,6 +28,9 @@ Guia de referência para montar o dashboard no Power BI Desktop, conectado ao ba
 | `vw_anime_melhor_avaliado_por_temporada` | campeão de nota de cada temporada | 4 |
 | `vw_quadrante_popularidade_nota` | cada anime classificado em 1 de 4 quadrantes (popularidade × nota) | 4.245 |
 | `vw_crescimento_genero` | contagem de lançamentos por gênero, 2021-23 vs 2024-26, com % de crescimento | 17 |
+| `vw_ranking_genero_por_nota` | ranking completo (não só top 5) de animes por nota dentro de cada gênero — 1 linha por par (anime, gênero) | ~13.875 |
+| `vw_quartil_popularidade` | todos os animes divididos em 4 quartis de popularidade (`members`) | 4.378 |
+| `vw_genero_dominante_por_estudio` | 1 linha por estúdio (com `estudio_id`, pra relacionar com `dim_estudio`): gênero mais produzido, quantos títulos nesse gênero, total do catálogo do estúdio e % que o gênero representa | 376 |
 
 Todas já estão aplicadas no banco `anime_analytics` (rodei `sql/queries_analiticas.sql` de novo depois de adicioná-las).
 
@@ -121,9 +124,27 @@ Exemplos reais que essas views trazem: o anime mais popular de todos é **Shinge
 
 Pra usar: gráfico de dispersão com `titulo` (ou `anime_id`) nos detalhes, eixo X `members`, eixo Y `score`, **legenda = `quadrante`** — o Power BI colore os 4 grupos automaticamente. É o "popularidade × avaliação, 4 grupos" que você pediu, já pronto sem precisar de medida DAX nenhuma.
 
+## 4.2 Gênero dominante por estúdio (gênero × estúdio sem repetir dado)
+
+Cruzar gênero e estúdio direto nas tabelas-ponte é arriscado: como um anime pode ter vários gêneros **e** vários estúdios ao mesmo tempo, uma medida como `Total de Membros` numa matriz `nome_estudio` × `nome_genero` conta o mesmo anime uma vez em cada combinação gênero-estúdio que ele participa — correto dentro de cada célula, mas fácil de ler errado como "número de animes" se você não prestar atenção (ver ressalva no fim desta seção).
+
+`vw_genero_dominante_por_estudio` resolve isso resumindo pra **1 linha por estúdio**, sem duplicar nenhum anime:
+- Pra cada par (estúdio, gênero), conta `DISTINCT anime_id` — um anime com 2 gêneros do mesmo estúdio entra em 2 pares diferentes (um por gênero, o que é correto), mas nunca é contado 2x dentro do **mesmo** par.
+- Usa `ROW_NUMBER()` pra pegar só o gênero de maior contagem de cada estúdio (empate desempatado por ordem alfabética do gênero, pra ser determinístico).
+- Traz também `total_titulos` (catálogo inteiro do estúdio) e `percentual_do_catalogo` (quanto do catálogo aquele gênero representa) — assim dá pra distinguir um estúdio genuinamente especializado (ex: 75% do catálogo num gênero só) de um que só "lidera por pouco" entre vários gêneros parecidos.
+
+**Como montar o gráfico de barras:**
+1. Adicione um slicer numérico sobre `total_titulos` (ex: mínimo 8) — sem isso, estúdios com 1-2 títulos aparecem "100% especializados" só por acaso, o que é ruído, não sinal (mesmo cuidado já usado em `Nota Media` por estúdio, seção 4).
+2. Gráfico de **barras** (colunas): eixo X = `nome_estudio`, valor = `qtd_no_genero` (ou `percentual_do_catalogo`, se quiser mostrar proporção em vez de volume absoluto), **legenda/cor = `genero_dominante`**.
+3. Ordene as barras por `total_titulos` decrescente, pra mostrar primeiro os estúdios mais relevantes (maior catálogo).
+
+Exemplo real (estúdios com ≥ 8 títulos, ordenado por catálogo): **Toei Animation** é o mais especializado do topo — 75,7% do catálogo (143 de 189 títulos) é Action. **bones** também é bem concentrado em Action (74,8%). Já **A-1 Pictures** e **TMS Entertainment**, apesar de Action também ser o gênero dominante, ficam abaixo de 50% — sinal de catálogo mais diversificado, não um estúdio "de um gênero só".
+
+> Ressalva pra não confundir números: essa view mede **quantidade de títulos**, não popularidade nem nota. Um estúdio "especialista" em Action pode ter títulos pouco populares — se quiser cruzar especialização com sucesso, combine esse gráfico com `Popularidade Media (estudio)` ou `Nota Media Confiavel` (seção 4) no mesmo painel.
+
 ## 5. Páginas do dashboard
 
-Cada pergunta abaixo está marcada com a fonte: **[nativo]** = só arrastar campos/medidas no Power BI, sem SQL novo; **[view]** = usa uma das 9 views da seção 1; **[def.]** = eu defini um critério que não estava óbvio no pedido (marcado explicitamente, pra você poder mudar).
+Cada pergunta abaixo está marcada com a fonte: **[nativo]** = só arrastar campos/medidas no Power BI, sem SQL novo; **[view]** = usa uma das views da seção 1; **[def.]** = eu defini um critério que não estava óbvio no pedido (marcado explicitamente, pra você poder mudar).
 
 ### Página 1 — Visão Geral de Animes
 
@@ -167,7 +188,8 @@ Filtro de página: slicer `dim_genero[nome_genero]`.
 | Anime mais popular de cada estúdio | **[view]** `vw_anime_mais_popular_por_estudio` (376 linhas — sugiro tabela com busca/slicer de estúdio, não gráfico) |
 | Anime melhor avaliado de cada estúdio | **[view]** `vw_anime_melhor_avaliado_por_estudio` (370 linhas — 6 estúdios não têm título com `scored_by ≥ 500`) |
 | Estúdio com mais lançamentos nos últimos anos | **[nativo][def.]** Slicer `ano ≥ 2024` + tabela `Total de Animes` por estúdio, Top N |
-| Quais gêneros cada estúdio mais produz | **[nativo]** Matriz: linhas `nome_estudio` (com slicer pra escolher 1 de cada vez, senão fica 376×17 células), colunas `nome_genero`, valor = contagem |
+| Quais gêneros cada estúdio mais produz (visão completa) | **[nativo]** Matriz: linhas `nome_estudio` (com slicer pra escolher 1 de cada vez, senão fica 376×17 células), colunas `nome_genero`, valor = contagem |
+| Estúdio "especialista": qual gênero domina o catálogo de cada estúdio | **[view]** `vw_genero_dominante_por_estudio` — ver "4.2 Gênero dominante por estúdio" abaixo |
 
 ### Página 4 — Temporadas
 

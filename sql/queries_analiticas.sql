@@ -114,7 +114,9 @@ FROM (
 WHERE posicao <= 5;
 
 
--- Ranking de animes dentro de cada gênero, por nota
+-- Ranking completo de animes dentro de cada gênero, por nota (todas as posições,
+-- não só o top 5 de vw_anime_melhor_avaliado_por_genero).
+CREATE OR REPLACE VIEW vw_ranking_genero_por_nota AS
 SELECT
     g.nome_genero,
     a.titulo,
@@ -126,7 +128,8 @@ JOIN dim_anime a ON a.anime_id = pg.anime_id
 JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
 ORDER BY g.nome_genero, posicao_no_genero;
 
--- Faixas de popularidade (quartis)
+-- Faixas de popularidade (quartis) de todos os animes, por número de membros.
+CREATE OR REPLACE VIEW vw_quartil_popularidade AS
 SELECT
     a.titulo,
     m.popularity,
@@ -258,3 +261,69 @@ SELECT
     ROUND(((qtd_recente - qtd_anterior)::numeric / NULLIF(qtd_anterior, 0)) * 100, 1) AS crescimento_pct
 FROM contagem
 ORDER BY crescimento_pct DESC NULLS LAST;
+
+
+-- Gênero dominante de cada estúdio (1 linha por estúdio, pra gráfico de barras).
+-- Cada par estúdio-gênero conta DISTINCT anime_id: um anime com vários gêneros
+-- do mesmo estúdio entra em vários pares (um por gênero, correto), mas nunca é
+-- contado duas vezes dentro do MESMO par — é isso que evita repetir dado.
+CREATE OR REPLACE VIEW vw_genero_dominante_por_estudio AS
+WITH pares AS (
+    SELECT
+        e.estudio_id,
+        e.nome_estudio,
+        g.nome_genero,
+        COUNT(DISTINCT pe.anime_id) AS qtd_no_genero
+    FROM dim_estudio e
+    JOIN ponte_anime_estudio pe ON pe.estudio_id = e.estudio_id
+    JOIN ponte_anime_genero pg ON pg.anime_id = pe.anime_id
+    JOIN dim_genero g ON g.nome_genero = pg.nome_genero
+    GROUP BY e.estudio_id, e.nome_estudio, g.nome_genero
+),
+total_estudio AS (
+    SELECT e.estudio_id, COUNT(DISTINCT pe.anime_id) AS total_titulos
+    FROM dim_estudio e
+    JOIN ponte_anime_estudio pe ON pe.estudio_id = e.estudio_id
+    GROUP BY e.estudio_id
+),
+ranking AS (
+    SELECT
+        p.estudio_id,
+        p.nome_estudio,
+        p.nome_genero,
+        p.qtd_no_genero,
+        t.total_titulos,
+        ROW_NUMBER() OVER (PARTITION BY p.estudio_id ORDER BY p.qtd_no_genero DESC, p.nome_genero) AS posicao
+    FROM pares p
+    JOIN total_estudio t ON t.estudio_id = p.estudio_id
+)
+SELECT
+    estudio_id,
+    nome_estudio,
+    nome_genero AS genero_dominante,
+    qtd_no_genero,
+    total_titulos,
+    ROUND((qtd_no_genero::numeric / total_titulos) * 100, 1) AS percentual_do_catalogo
+FROM ranking
+WHERE posicao = 1
+ORDER BY total_titulos DESC;
+
+
+-- Ficha-resumo de cada estúdio (1 linha por estúdio): gênero dominante, volume
+-- de títulos, nota média e o anime mais popular — junta 3 views que já
+-- existem, cada uma delas 1:1 com o estúdio, então não duplica nenhuma linha.
+-- Alimenta um card de detalhe no Power BI que reage só ao slicer de Estúdio.
+CREATE OR REPLACE VIEW vw_ficha_estudio AS
+SELECT
+    gd.estudio_id,
+    gd.nome_estudio,
+    gd.genero_dominante,
+    gd.qtd_no_genero,
+    gd.total_titulos,
+    re.nota_media,
+    re.total_membros,
+    mp.titulo  AS anime_mais_popular,
+    mp.members AS anime_mais_popular_membros
+FROM vw_genero_dominante_por_estudio gd
+JOIN vw_ranking_estudios re ON re.estudio_id = gd.estudio_id
+LEFT JOIN vw_anime_mais_popular_por_estudio mp ON mp.nome_estudio = gd.nome_estudio;
