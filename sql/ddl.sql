@@ -1,12 +1,12 @@
--- Schema do projeto de análise de anime (API AniList, GraphQL)
--- Dimensões primeiro, depois pontes N:N, depois fato.
--- Fonte de dados: graphql.anilist.co (ver src/coletar_anilist.py)
+-- Schema for the anime analytics project (AniList API, GraphQL)
+-- Dimensions first, then N:N bridge tables, then the fact table.
+-- Data source: graphql.anilist.co (see src/coletar_anilist.py)
 --
--- Script de reset: os DROPs abaixo tornam esse arquivo seguro de rodar de novo
--- (ex: numa migração de schema), mas são destrutivos — apagam tudo, inclusive
--- o histórico acumulado em fato_anime_metricas. Rodar só na configuração
--- inicial ou quando o schema muda de propósito. Pra carregar dados no dia a
--- dia (sem perder histórico), usar src/carga_sql.py, que faz upsert.
+-- Reset script: the DROPs below make this file safe to run again (e.g. for
+-- a schema migration), but they are destructive — everything is wiped,
+-- including the history accumulated in fato_anime_metricas. Only run this
+-- on initial setup or when the schema purpose changes. For day-to-day loads
+-- (without losing history), use src/carga_sql.py, which does an upsert.
 
 DROP TABLE IF EXISTS ponte_anime_genero CASCADE;
 DROP TABLE IF EXISTS ponte_anime_estudio CASCADE;
@@ -16,12 +16,12 @@ DROP TABLE IF EXISTS dim_genero CASCADE;
 DROP TABLE IF EXISTS dim_estudio CASCADE;
 
 CREATE TABLE dim_anime (
-    anime_id            INTEGER PRIMARY KEY,       -- id da AniList
+    anime_id            INTEGER PRIMARY KEY,       -- AniList id
     titulo              TEXT NOT NULL,
     titulo_ingles       TEXT,
     titulo_japones      TEXT,
-    tipo                TEXT,                      -- TV, MOVIE, OVA, ONA, SPECIAL, MUSIC (format da AniList)
-    fonte               TEXT,                      -- MANGA, LIGHT_NOVEL, ORIGINAL, GAME... (source da AniList)
+    tipo                TEXT,                      -- TV, MOVIE, OVA, ONA, SPECIAL, MUSIC (AniList's "format")
+    fonte               TEXT,                      -- MANGA, LIGHT_NOVEL, ORIGINAL, GAME... (AniList's "source")
     episodios           INTEGER,
     status              TEXT,                      -- FINISHED, RELEASING, NOT_YET_RELEASED, CANCELLED, HIATUS
     em_exibicao         BOOLEAN,
@@ -32,15 +32,16 @@ CREATE TABLE dim_anime (
     temporada            TEXT                      -- winter, spring, summer, fall
 );
 
--- Sem id surrogate: a AniList não fornece id de gênero, e gerar um sequencial
--- por ordem alfabética a cada coleta é instável (muda se o conjunto de
--- gêneros mudar entre execuções). nome_genero é a chave natural e estável.
+-- No surrogate id: AniList doesn't provide a genre id, and generating a
+-- sequential one by alphabetical order on every collection run would be
+-- unstable (it shifts if the set of genres changes between runs).
+-- nome_genero is the natural, stable key instead.
 CREATE TABLE dim_genero (
     nome_genero          TEXT PRIMARY KEY
 );
 
 CREATE TABLE dim_estudio (
-    estudio_id           INTEGER PRIMARY KEY,       -- id do estúdio na AniList (só estúdios com isAnimationStudio=true)
+    estudio_id           INTEGER PRIMARY KEY,       -- AniList studio id (only studios with isAnimationStudio=true)
     nome_estudio          TEXT NOT NULL
 );
 
@@ -59,11 +60,11 @@ CREATE TABLE ponte_anime_estudio (
 CREATE TABLE fato_anime_metricas (
     anime_id            INTEGER REFERENCES dim_anime(anime_id),
     data_coleta          DATE NOT NULL,
-    score                NUMERIC,                  -- averageScore da AniList (0-100) convertido para escala 0-10
-    scored_by            INTEGER,                  -- soma de stats.scoreDistribution (AniList não expõe contagem direta)
+    score                NUMERIC,                  -- AniList's averageScore (0-100), converted to a 0-10 scale
+    scored_by            INTEGER,                  -- sum of stats.scoreDistribution (AniList doesn't expose a direct count)
     rank                 INTEGER,                  -- rankings[type=RATED, allTime=true].rank
     popularity           INTEGER,                  -- rankings[type=POPULAR, allTime=true].rank
-    members              INTEGER,                  -- popularity da AniList (contagem de usuários com o anime na lista)
-    favorites             INTEGER,                  -- favourites da AniList
+    members              INTEGER,                  -- AniList's "popularity" field (count of users with the anime on their list)
+    favorites             INTEGER,                  -- AniList's favourites
     PRIMARY KEY (anime_id, data_coleta)
 );

@@ -1,8 +1,8 @@
 """
-Coleta dos animes mais populares (top 5.000) via GraphQL (graphql.anilist.co),
-salvando cada página de resposta bruta em data/raw/anilist/<data>/. Não exige
-autenticação, mas tem rate limit de 30 requisições/minuto (ver header
-X-RateLimit-Limit da resposta).
+Collects the most popular anime (top 5,000) via GraphQL (graphql.anilist.co),
+saving each raw response page to data/raw/anilist/<date>/. No authentication
+required, but the API has a rate limit of 30 requests/minute (see the
+X-RateLimit-Limit response header).
 """
 
 import json
@@ -16,12 +16,12 @@ URL = "https://graphql.anilist.co"
 PASTA_SAIDA = Path("data/raw/anilist") / date.today().isoformat()
 
 PER_PAGE = 50
-LIMITE_PAGINAS = 100         # 100 páginas x 50 itens = 5.000 animes (teto de profundidade
-                              # de paginação da API AniList: page * perPage <= 5000)
-ESPACO_ENTRE_CHAMADAS = 2.2  # segundos — mantém margem sob o limite de 30 req/min
+LIMITE_PAGINAS = 100         # 100 pages x 50 items = 5,000 anime (AniList's pagination
+                              # depth ceiling: page * perPage <= 5000)
+ESPACO_ENTRE_CHAMADAS = 2.2  # seconds — keeps a margin under the 30 req/min limit
 
 MAX_TENTATIVAS = 3
-ESPERA_INICIAL = 5           # segundos, dobra a cada nova tentativa
+ESPERA_INICIAL = 5           # seconds, doubles on each retry
 
 QUERY = """
 query ($page: Int, $perPage: Int) {
@@ -54,7 +54,7 @@ query ($page: Int, $perPage: Int) {
 
 
 def chamar_api(pagina):
-    """Chama a API AniList (GraphQL) com espaçamento e retry/backoff exponencial."""
+    """Calls the AniList API (GraphQL) with spacing and exponential retry/backoff."""
     tentativa = 0
     espera = ESPERA_INICIAL
     while True:
@@ -68,8 +68,11 @@ def chamar_api(pagina):
             if resp.status_code == 429:
                 raise requests.exceptions.HTTPError("status 429 (rate limit)")
             resp.raise_for_status()
+            corpo = resp.json()
+            if "errors" in corpo:
+                raise requests.exceptions.HTTPError(f"GraphQL retornou erro: {corpo['errors']}")
             time.sleep(ESPACO_ENTRE_CHAMADAS)
-            return resp.json()["data"]["Page"]
+            return corpo["data"]["Page"]
         except (requests.exceptions.HTTPError, requests.exceptions.ConnectionError,
                 requests.exceptions.Timeout) as e:
             if tentativa >= MAX_TENTATIVAS:

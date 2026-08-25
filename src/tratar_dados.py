@@ -1,11 +1,11 @@
 """
-Tratamento dos dados brutos coletados da API AniList.
+Cleans up the raw data collected from the AniList API.
 
-Lê todos os anime_pagina_*.json da coleta mais recente em data/raw/anilist/<data>/,
-normaliza os campos aninhados (genres, studios, rankings, stats), remove
-conteúdo adulto (Hentai, Ecchi, isAdult=true — fora do escopo do portfólio) e
-gera os DataFrames finais (um por tabela do schema), salvando como CSV em
-data/processed/.
+Reads every anime_pagina_*.json from the most recent run in
+data/raw/anilist/<date>/, normalizes the nested fields (genres, studios,
+rankings, stats), removes adult content (Hentai, Ecchi, isAdult=true — out of
+scope for this portfolio) and builds the final DataFrames (one per schema
+table), saving them as CSVs in data/processed/.
 """
 
 import json
@@ -25,7 +25,7 @@ def pasta_coleta_mais_recente():
 
 
 def carregar_animes_brutos(pasta_coleta):
-    """Carrega e concatena o campo 'media' de todas as páginas coletadas."""
+    """Loads and concatenates the 'media' field from every collected page."""
     animes = []
     for arquivo in sorted(pasta_coleta.glob("anime_pagina_*.json")):
         with open(arquivo, encoding="utf-8") as f:
@@ -38,7 +38,7 @@ GENEROS_EXCLUIDOS = {"Hentai", "Ecchi"}
 
 
 def filtrar_conteudo_adulto(animes):
-    """Remove animes classificados como Hentai/Ecchi ou isAdult=true (fora do escopo do portfólio)."""
+    """Removes anime classified as Hentai/Ecchi or isAdult=true (out of scope for this portfolio)."""
     return [
         a for a in animes
         if not a.get("isAdult")
@@ -47,7 +47,7 @@ def filtrar_conteudo_adulto(animes):
 
 
 def parsear_data(data_parcial):
-    """Monta uma data a partir de {year, month, day} da AniList (mês/dia podem faltar)."""
+    """Builds a date from AniList's {year, month, day} (month/day can be missing)."""
     if not data_parcial or not data_parcial.get("year"):
         return None
     ano = data_parcial["year"]
@@ -57,7 +57,7 @@ def parsear_data(data_parcial):
 
 
 def extrair_ranking(rankings, tipo):
-    """Pega o rank all-time de um tipo (RATED ou POPULAR) da lista de rankings."""
+    """Picks the all-time rank of a given type (RATED or POPULAR) from the rankings list."""
     for r in rankings or []:
         if r.get("type") == tipo and r.get("allTime"):
             return r.get("rank")
@@ -93,9 +93,9 @@ def construir_dim_anime(animes):
 
 
 def construir_genero_tabelas(animes):
-    """AniList só tem uma lista simples de nomes de gênero (sem id nem tema/demografia).
-    nome_genero é a chave natural de dim_genero — nada de id sequencial gerado aqui,
-    porque a ordem alfabética muda se o conjunto de gêneros mudar entre coletas."""
+    """AniList only exposes a plain list of genre names (no id, no theme/demographic).
+    nome_genero is dim_genero's natural key — no sequential id generated here,
+    since alphabetical order shifts if the set of genres changes between runs."""
     nomes_generos = sorted({g for a in animes for g in (a.get("genres") or [])})
     df_genero = pd.DataFrame({"nome_genero": nomes_generos})
 
@@ -109,8 +109,8 @@ def construir_genero_tabelas(animes):
 
 
 def construir_estudio_tabelas(animes):
-    """Só considera estúdios de animação de fato (isAnimationStudio=true) —
-    a AniList também lista produtoras/editoras junto em 'studios'."""
+    """Only keeps genuine animation studios (isAnimationStudio=true) —
+    AniList also lists producers/publishers together under 'studios'."""
     estudios = {}
     pontes = []
     for a in animes:

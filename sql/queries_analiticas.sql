@@ -1,7 +1,7 @@
--- Views e queries analíticas sobre o schema de ddl.sql
+-- Analytical views and queries on top of the ddl.sql schema
 
--- Métricas mais recentes de cada anime (fato_anime_metricas pode acumular
--- várias coletas por anime_id ao longo do tempo).
+-- Latest metrics for each anime (fato_anime_metricas can accumulate
+-- several collection runs per anime_id over time).
 CREATE OR REPLACE VIEW vw_metricas_atuais AS
 SELECT f.*
 FROM (
@@ -13,7 +13,7 @@ FROM (
 WHERE rn = 1;
 
 
--- Nota média por gênero
+-- Average score per genre
 CREATE OR REPLACE VIEW vw_nota_media_genero AS
 SELECT
     g.nome_genero,
@@ -28,7 +28,7 @@ GROUP BY g.nome_genero
 ORDER BY nota_media DESC;
 
 
--- Ranking de estúdios: volume de produções x nota média
+-- Studio ranking: production volume vs average score
 CREATE OR REPLACE VIEW vw_ranking_estudios AS
 SELECT
     e.estudio_id,
@@ -44,7 +44,7 @@ GROUP BY e.estudio_id, e.nome_estudio
 ORDER BY qtd_animes DESC, nota_media DESC;
 
 
--- Engajamento do público por gênero (membros/favoritos, fidelização)
+-- Audience engagement per genre (members/favorites, loyalty)
 CREATE OR REPLACE VIEW vw_engajamento_genero AS
 SELECT
     g.nome_genero,
@@ -59,7 +59,7 @@ GROUP BY g.nome_genero
 ORDER BY proporcao_favoritos_por_membro DESC;
 
 
--- Score e popularidade por anime, com gêneros agregados
+-- Score and popularity per anime, with aggregated genres
 CREATE OR REPLACE VIEW vw_score_vs_popularidade AS
 SELECT
     a.anime_id,
@@ -80,8 +80,8 @@ LEFT JOIN dim_genero g ON g.nome_genero = pg.nome_genero
 GROUP BY a.anime_id, a.titulo, a.tipo, a.fonte, a.ano, m.score, m.scored_by, m.popularity, m.members, m.favorites;
 
 
--- Top 5 animes mais populares (maior número de membros) de cada gênero.
--- Filtrar posicao = 1 no Power BI dá o "campeão" de cada gênero; posicao <= 5 dá o ranking completo.
+-- Top 5 most popular anime (highest member count) of each genre.
+-- Filtering posicao = 1 in Power BI gives the "champion" of each genre; posicao <= 5 gives the full ranking.
 CREATE OR REPLACE VIEW vw_anime_mais_popular_por_genero AS
 SELECT nome_genero, titulo, members, score, posicao
 FROM (
@@ -96,9 +96,9 @@ FROM (
 WHERE posicao <= 5;
 
 
--- Top 5 animes mais bem avaliados de cada gênero (amostra confiável: scored_by >= 500).
--- Empates em score são desempatados por scored_by (o mais votado entre os empatados),
--- pra ranking ficar determinístico em vez de depender da ordem física das linhas.
+-- Top 5 best-rated anime of each genre (reliable sample: scored_by >= 500).
+-- Score ties are broken by scored_by (the most-voted among the tied ones),
+-- so the ranking is deterministic instead of depending on row physical order.
 CREATE OR REPLACE VIEW vw_anime_melhor_avaliado_por_genero AS
 SELECT nome_genero, titulo, score, members, posicao
 FROM (
@@ -114,8 +114,8 @@ FROM (
 WHERE posicao <= 5;
 
 
--- Ranking completo de animes dentro de cada gênero, por nota (todas as posições,
--- não só o top 5 de vw_anime_melhor_avaliado_por_genero).
+-- Full ranking of anime within each genre, by score (every position,
+-- not just the top 5 from vw_anime_melhor_avaliado_por_genero).
 CREATE OR REPLACE VIEW vw_ranking_genero_por_nota AS
 SELECT
     g.nome_genero,
@@ -128,20 +128,20 @@ JOIN dim_anime a ON a.anime_id = pg.anime_id
 JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
 ORDER BY g.nome_genero, posicao_no_genero;
 
--- Faixas de popularidade (quartis) de todos os animes, por número de membros.
+-- Popularity brackets (quartiles) for every anime, by member count.
 CREATE OR REPLACE VIEW vw_quartil_popularidade AS
 SELECT
     a.titulo,
     m.popularity,
     m.members,
-    NTILE(4) OVER (ORDER BY m.members DESC) AS quartil_popularidade -- 1 = mais popular
+    NTILE(4) OVER (ORDER BY m.members DESC) AS quartil_popularidade -- 1 = most popular
 FROM dim_anime a
 JOIN vw_metricas_atuais m ON m.anime_id = a.anime_id
 ORDER BY quartil_popularidade, m.members DESC;
 
--- Quadrante de popularidade x nota de cada anime (amostra confiável: scored_by >= 1000).
--- Divide por mediana de score e de membros em vez de tercis fixos — dá 4 grupos
--- balanceados (~50/50 em cada eixo), prontos pra colorir um scatter no Power BI.
+-- Popularity x score quadrant for each anime (reliable sample: scored_by >= 1000).
+-- Splits by median score and median members instead of fixed thirds — gives
+-- 4 balanced groups (~50/50 on each axis), ready to color a scatter plot in Power BI.
 CREATE OR REPLACE VIEW vw_quadrante_popularidade_nota AS
 WITH base AS (
     SELECT a.anime_id, a.titulo, m.score, m.members
@@ -166,7 +166,7 @@ SELECT
 FROM base b CROSS JOIN medianas md;
 
 
--- Anime mais popular de cada estúdio
+-- Most popular anime of each studio
 CREATE OR REPLACE VIEW vw_anime_mais_popular_por_estudio AS
 SELECT nome_estudio, titulo, members, score
 FROM (
@@ -181,7 +181,7 @@ FROM (
 WHERE posicao = 1;
 
 
--- Anime mais bem avaliado de cada estúdio (amostra confiável: scored_by >= 500)
+-- Best-rated anime of each studio (reliable sample: scored_by >= 500)
 CREATE OR REPLACE VIEW vw_anime_melhor_avaliado_por_estudio AS
 SELECT nome_estudio, titulo, score, members
 FROM (
@@ -197,7 +197,7 @@ FROM (
 WHERE posicao = 1;
 
 
--- Quantos títulos de cada estúdio estão entre os 100 animes mais populares da base
+-- How many titles of each studio are among the 100 most popular anime in the dataset
 CREATE OR REPLACE VIEW vw_estudios_no_top100 AS
 WITH top100 AS (
     SELECT a.anime_id
@@ -214,7 +214,7 @@ GROUP BY e.nome_estudio
 ORDER BY qtd_no_top100 DESC;
 
 
--- Anime mais popular de cada temporada (winter/spring/summer/fall, agregando todos os anos)
+-- Most popular anime of each season (winter/spring/summer/fall, aggregating every year)
 CREATE OR REPLACE VIEW vw_anime_mais_popular_por_temporada AS
 SELECT temporada, titulo, members, score
 FROM (
@@ -228,7 +228,7 @@ FROM (
 WHERE posicao = 1;
 
 
--- Anime mais bem avaliado de cada temporada (amostra confiável: scored_by >= 500)
+-- Best-rated anime of each season (reliable sample: scored_by >= 500)
 CREATE OR REPLACE VIEW vw_anime_melhor_avaliado_por_temporada AS
 SELECT temporada, titulo, score, members
 FROM (
@@ -242,9 +242,9 @@ FROM (
 WHERE posicao = 1;
 
 
--- Crescimento de lançamentos por gênero: últimos 3 anos completos (2024-2026) vs os 3 anteriores (2021-2023).
--- Período fixo (não relativo a CURRENT_DATE) pra não mudar sozinho a cada execução;
--- ajustar os anos aqui quando rodar em outro momento. 2026 ainda não fechou o ano.
+-- Growth in releases per genre: last 3 full years (2024-2026) vs the previous 3 (2021-2023).
+-- Fixed period (not relative to CURRENT_DATE) so it doesn't shift on its own between runs;
+-- adjust the years here when running this at a different point in time. 2026 hasn't closed yet.
 CREATE OR REPLACE VIEW vw_crescimento_genero AS
 WITH contagem AS (
     SELECT
@@ -263,10 +263,10 @@ FROM contagem
 ORDER BY crescimento_pct DESC NULLS LAST;
 
 
--- Gênero dominante de cada estúdio (1 linha por estúdio, pra gráfico de barras).
--- Cada par estúdio-gênero conta DISTINCT anime_id: um anime com vários gêneros
--- do mesmo estúdio entra em vários pares (um por gênero, correto), mas nunca é
--- contado duas vezes dentro do MESMO par — é isso que evita repetir dado.
+-- Dominant genre of each studio (1 row per studio, for a bar chart).
+-- Each studio-genre pair counts DISTINCT anime_id: an anime with several genres
+-- from the same studio ends up in several pairs (one per genre, correctly), but
+-- is never counted twice within the SAME pair — that's what avoids double-counting.
 CREATE OR REPLACE VIEW vw_genero_dominante_por_estudio AS
 WITH pares AS (
     SELECT
@@ -309,10 +309,10 @@ WHERE posicao = 1
 ORDER BY total_titulos DESC;
 
 
--- Ficha-resumo de cada estúdio (1 linha por estúdio): gênero dominante, volume
--- de títulos, nota média e o anime mais popular — junta 3 views que já
--- existem, cada uma delas 1:1 com o estúdio, então não duplica nenhuma linha.
--- Alimenta um card de detalhe no Power BI que reage só ao slicer de Estúdio.
+-- Summary sheet for each studio (1 row per studio): dominant genre, title
+-- volume, average score and the most popular anime — joins 3 views that
+-- already exist, each of them 1:1 with the studio, so no row gets duplicated.
+-- Feeds a detail card in Power BI that only reacts to the Studio slicer.
 CREATE OR REPLACE VIEW vw_ficha_estudio AS
 SELECT
     gd.estudio_id,
