@@ -6,11 +6,7 @@ Projeto de portfólio (Analista de Dados) que percorre o ciclo completo de um pi
 
 ## Pergunta de negócio
 
-O catálogo de anime cresceu de forma acelerada na última década, com estúdios cada vez mais especializados e gêneros competindo por atenção do público. Este projeto investiga como três dimensões desse mercado se relacionam, e onde elas divergem:
-
-> **Nota, popularidade e engajamento do público se comportam de forma parecida entre gêneros e estúdios de anime, ou existem descolamentos relevantes entre "o que é bem avaliado" e "o que é popular"? Como esse comportamento evoluiu ao longo do tempo e da sazonalidade de lançamentos?**
-
-Isso se desdobra em perguntas mais concretas: quais estúdios entregam consistência de qualidade em vez de volume? Existem gêneros "cult" (nota alta, audiência baixa) escondidos na base? A sazonalidade de lançamento (outono, inverno, primavera, verão) tem relação com a qualidade média do que é lançado?
+O catálogo de anime cresceu rápido nos últimos anos, com estúdios cada vez mais especializados e gêneros disputando a atenção do público. Este projeto investiga: nota, popularidade e engajamento andam juntos entre gêneros e estúdios de anime, ou existem descolamentos importantes entre o que é bem avaliado e o que é popular? E como isso evoluiu ao longo do tempo e das temporadas de lançamento?
 
 ## Stack
 
@@ -87,8 +83,8 @@ Também disponível:
 
 ## Principais insights
 
-- **Especialização não é acidente, é estratégia de estúdio.** Entre os estúdios de maior catálogo, a Toei Animation concentra 75,7% dos seus 189 títulos em Action, e a bones, 74,8% dos seus 123, enquanto estúdios como Production I.G (211 títulos) e A-1 Pictures (162) mantêm catálogos mais diversificados, com o gênero dominante representando menos de 50% da produção. Ou seja, "produzir muito" e "ser especialista num gênero" são estratégias distintas, não a mesma coisa.
+- **Volume de produção e qualidade não vêm do mesmo lugar.** Nenhum dos 10 estúdios mais produtivos (Production I.G, Toei Animation, MADHOUSE, entre outros) aparece entre os 8 com maior nota média da base; esse topo é ocupado por estúdios bem menores e mais nichados, como bones film e Bandai Namco Pictures.
 - **Popularidade e qualidade divergem em quase metade da base.** Dividindo os 4.245 animes com amostra confiável de votos pela mediana de nota e de membros, só 1.450 (34%) são "populares e bem avaliados" ao mesmo tempo. Quase tantos (1.297, 31%) são "pouco populares e mal avaliados", mas 825 títulos são "joias escondidas" (nota acima da mediana, audiência abaixo), um sinal de que a audiência de massa nem sempre acompanha a crítica.
 - **Terror é o gênero mais arriscado e o Suspense o mais seguro.** Terror tem a menor nota média da base (6,78), enquanto Suspense lidera (7,35), uma diferença de mais de meio ponto na escala de 10, num mercado com volume de produção relativamente equivalente entre os dois.
 - **A sazonalidade concentra os melhores lançamentos no inverno, não no volume de outono.** Outono é a temporada com mais estreias (1.173, 28% do total), mas o inverno, a temporada com menos lançamentos (898), inclui *Gintama: THE FINAL* (nota 9,1), um dos dois animes mais bem avaliados de toda a base. Mais lançamentos não significa mais qualidade concentrada.
-- **Crescimento de gênero é desigual e acelerando em direções opostas.** Comparando 2021-2023 com 2024-2026, Romance cresceu 28,5% em número de lançamentos (151 para 194 títulos), enquanto Mecha encolheu 56,5% no mesmo período: o tipo de sinal que orientaria uma decisão de investimento em produção, se este fosse um dashboard de mercado real.
+- **A queda de lançamentos nos anos mais recentes é um efeito da amostra, não da indústria.** O volume de animes por ano cai visivelmente perto de 2024-2026, mas isso reflete o critério de coleta (top 5.000 por popularidade acumulada): títulos recém-lançados ainda não tiveram tempo de acumular audiência suficiente para entrar no recorte, não uma queda real de produção.
