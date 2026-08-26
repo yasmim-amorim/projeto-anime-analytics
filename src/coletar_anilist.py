@@ -6,6 +6,7 @@ X-RateLimit-Limit response header).
 """
 
 import json
+import os
 import time
 from datetime import date
 from pathlib import Path
@@ -51,6 +52,15 @@ query ($page: Int, $perPage: Int) {
   }
 }
 """
+
+
+def salvar_pagina(caminho, dados):
+    """Writes the page atomically (temp file + rename), so an interrupted
+    process never leaves a truncated .json that would later be mistaken
+    for a successfully collected page."""
+    tmp = caminho.with_suffix(".tmp")
+    tmp.write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
+    os.replace(tmp, caminho)
 
 
 def chamar_api(pagina):
@@ -103,7 +113,7 @@ def coletar_top_animes():
             pagina += 1
             continue
 
-        caminho.write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
+        salvar_pagina(caminho, dados)
 
         qtd_itens = len(dados.get("media", []))
         total_coletado += qtd_itens
@@ -130,7 +140,7 @@ def reprocessar_falhas(falhas, pausa=30):
         try:
             dados = chamar_api(pagina)
             caminho = PASTA_SAIDA / f"anime_pagina_{pagina:03d}.json"
-            caminho.write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
+            salvar_pagina(caminho, dados)
             print(f"  página {pagina} recuperada com sucesso.")
         except Exception as e:
             print(f"  página {pagina} falhou de novo: {e}")
