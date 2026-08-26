@@ -21,14 +21,18 @@ O plano de ação completo, com checklist por etapa, vive em `plano-de-acao-proj
 ├── src/
 │   ├── coletar_anilist.py           # coleta via GraphQL com retry/backoff
 │   ├── tratar_dados.py              # normaliza JSON bruto -> CSVs
+│   ├── validar_dados.py             # checa integridade dos CSVs (PKs, FKs, nulos)
 │   └── carga_sql.py                 # carrega CSVs no Postgres
 ├── sql/
 │   ├── ddl.sql                      # schema: dim_anime, dim_genero, dim_estudio,
 │   │                                 # pontes N:N, fato_anime_metricas
 │   └── queries_analiticas.sql       # views + window functions
 ├── docs/
-│   └── guia_powerbi.md              # guia de referência p/ montar o dashboard
-└── dashboard/                       # .pbix vai aqui quando construído
+│   ├── guia_powerbi.md              # guia de referência do dashboard
+│   └── prints/                      # screenshots do dashboard usados no README
+└── dashboard/
+    ├── anime_dashboard.pbix
+    └── anime_dashboard.pdf
 ```
 
 ## Como rodar o pipeline localmente
@@ -37,6 +41,7 @@ O plano de ação completo, com checklist por etapa, vive em `plano-de-acao-proj
 venv\Scripts\activate
 python src/coletar_anilist.py  # popula data/raw/anilist/<data>/
 python src/tratar_dados.py     # gera data/processed/*.csv
+python src/validar_dados.py    # confere integridade antes de carregar
 python src/carga_sql.py        # upsert no Postgres — seguro rodar de novo, não apaga histórico
 ```
 
@@ -55,12 +60,18 @@ Requer `.env` local com `DATABASE_URL` (ver `.env.example`) e banco `anime_analy
 - **Relacionamentos N:N no Power BI** (`ponte_anime_genero`, `ponte_anime_estudio`) precisam de direção de filtro "Ambos" — sem isso, filtrar por gênero/estúdio não reflete nos KPIs. Detalhes em `docs/guia_powerbi.md`.
 - **`data/raw/*.json` e `data/processed/*.csv` são versionados no git** (decisão deliberada, para reprodutibilidade do portfólio) — não adicionar ao `.gitignore`.
 - **`plano-de-acao-projeto-anime.md` não é versionado** — é material de trabalho interno (checklist, notas de sessão), não parte do portfólio público. Continua existindo localmente e deve ser lido/atualizado normalmente entre sessões.
+- **Escrita de página bruta é atômica**: `coletar_anilist.py` grava cada `anime_pagina_*.json` num `.tmp` e só depois renomeia pro nome final (`os.replace`). Isso evita que uma interrupção no meio da gravação deixe um arquivo truncado que seria erroneamente tratado como "já coletado" numa execução seguinte.
+- **Idioma dividido por camada, de propósito**: comentários e docstrings no código (Python/SQL) estão em inglês; o dashboard do Power BI (nomes de gênero, temporada, títulos de card/gráfico) está em português. São duas decisões independentes — não traduzir uma achando que precisa bater com a outra.
+- **Nome de gênero e temporada no Power BI são colunas calculadas, não os valores brutos da AniList**: `dim_genero[nome_genero_pt]`, `vw_ficha_estudio[genero_dominante_pt]`, `vw_nota_media_genero[nome_genero_pt]` (todas via `SWITCH`) e `dim_anime[temporada_pt]` traduzem os valores em inglês da API (Action, fall, etc.) pra português, mantendo Slice of Life/Mecha/Mahou Shoujo como estão (termos comuns no fandom mesmo em português). Se adicionar um gráfico novo usando gênero/temporada, usar a coluna `_pt`, não a original.
+- **Repositório é público no GitHub** (`github.com/yasmim-amorim/projeto-anime-analytics`) — é o objetivo do projeto (portfólio), então não reverter pra privado.
 
-## Estado atual (ver plano de ação para detalhes)
+## Estado atual
 
-- Coleta completa (5.000 animes, teto de paginação da API AniList) e tratamento com filtro de conteúdo adulto aplicado: **4.378 animes, 376 estúdios, 17 gêneros** em `data/processed/` e já carregados no Postgres.
-- Power BI: guia de referência escrito, dashboard ainda não iniciado.
+Projeto completo e publicado: coleta (4.378 animes, 376 estúdios, 17 gêneros), tratamento, carga no Postgres, camada analítica em SQL e dashboard no Power BI com 4 páginas (Visão Geral, Ranking, Gênero e Estúdios, Temporadas) — tudo commitado e no GitHub, com README contendo prints, insights e link de vídeo demonstrativo.
 
-## Perfil da usuária
+Pendências conhecidas (baixa prioridade, cosméticas):
+- Eixo Y truncado no gráfico "Nota Média por Ano" (página Gênero e Estúdios) — devia começar em 0.
+- Gráfico "Favoritos" (página Ranking) está como linha; devia ser barras (dado categórico, não uma série contínua).
+- Data no rodapé dos dashboards ("Última atualização") ficou como a data de edição do Power BI, não a data real da coleta (`data/raw/anilist/2026-08-16/`) — corrigir pra 16/08/2026 quando mexer no arquivo de novo.
 
-Ainda está aprendendo Python/pandas, SQL, PostgreSQL e Power BI — priorizar explicações práticas e passo a passo em vez de assumir conhecimento prévio profundo.
+Limitação estrutural conhecida e aceita (ver acima, "Power BI ainda não trata multi-coleta") — decisão consciente de não corrigir, já que não há plano de recoletar os dados.
