@@ -44,7 +44,7 @@ O dashboard completo (Power BI, 4 páginas) está em [`dashboard/anime_dashboard
 
 Também disponível:
 - **PDF estático** (sem interatividade): [`dashboard/anime_dashboard.pdf`](dashboard/anime_dashboard.pdf)
-- **Vídeo demonstrativo**: [assista aqui](LINK_DO_YOUTUBE)
+- **Vídeo demonstrativo**: [assista aqui](https://youtu.be/1ACAOAdmqOw)
 
 ## Próximos passos
 
