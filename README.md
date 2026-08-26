@@ -30,12 +30,35 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Crie um arquivo `.env` na raiz com a variável `DATABASE_URL` apontando para o seu PostgreSQL local, banco `anime_analytics` (veja `.env.example` como referência). Rode `sql/ddl.sql` nesse banco antes da primeira carga.
+Requer [PostgreSQL](https://www.postgresql.org/download/) instalado localmente (ou acessível via rede). Crie um arquivo `.env` na raiz com a variável `DATABASE_URL` apontando para o seu banco, `anime_analytics` (veja `.env.example` como referência). Rode `sql/ddl.sql` nesse banco antes da primeira carga.
 
 ```bash
 python src/coletar_anilist.py   # popula data/raw/anilist/<data>/
 python src/tratar_dados.py      # gera data/processed/*.csv
+python src/validar_dados.py     # confere integridade dos CSVs antes de carregar
 python src/carga_sql.py         # carrega no Postgres
+```
+
+## Estrutura do repositório
+
+```
+├── data/
+│   ├── raw/anilist/<data>/          # JSON bruto por coleta (paginado)
+│   └── processed/                   # CSVs tratados (um por tabela do schema)
+├── src/
+│   ├── coletar_anilist.py           # coleta via GraphQL com retry/backoff
+│   ├── tratar_dados.py              # normaliza JSON bruto -> CSVs
+│   ├── validar_dados.py             # checa integridade dos CSVs
+│   └── carga_sql.py                 # carrega CSVs no Postgres
+├── sql/
+│   ├── ddl.sql                      # schema: dim_anime, dim_genero, dim_estudio,
+│   │                                 # pontes N:N, fato_anime_metricas
+│   └── queries_analiticas.sql       # views + window functions
+├── docs/
+│   └── guia_powerbi.md              # guia de referência do dashboard
+└── dashboard/
+    ├── anime_dashboard.pbix
+    └── anime_dashboard.pdf
 ```
 
 ## Dashboard
@@ -46,6 +69,25 @@ Também disponível:
 - **PDF estático** (sem interatividade): [`dashboard/anime_dashboard.pdf`](dashboard/anime_dashboard.pdf)
 - **Vídeo demonstrativo**: [assista aqui](https://youtu.be/1ACAOAdmqOw)
 
-## Próximos passos
+### Prints
 
-- Adicionar prints do dashboard e principais insights a esta documentação.
+| Visão Geral | Ranking |
+|---|---|
+| ![Visão Geral](docs/prints/visao_geral.png) | ![Ranking](docs/prints/ranking.png) |
+
+| Gênero e Estúdios | Temporadas |
+|---|---|
+| ![Gênero e Estúdios](docs/prints/genero_e_estudios.png) | ![Temporadas](docs/prints/temporadas.png) |
+
+## Principais insights
+
+- **Toei Animation** é o estúdio mais especializado entre os de maior catálogo: 75,7% de seus 189 títulos são do gênero Action.
+- **Terror** é o gênero pior avaliado da base (nota média 6,78) — mas com volume de produção relativamente baixo, tem potencial de "descoberta" pra quem busca fora do mainstream.
+- Apesar de o **outono** ser a temporada com mais lançamentos (1.173 títulos), o **inverno** concentra 2 dos 4 melhores avaliados de todos os tempos, incluindo *Gintama: THE FINAL* (nota 9,1).
+- Nota e popularidade **não andam sempre juntas**: dividindo a base pela mediana de cada eixo, quase metade dos animes analisados (1.297 de 4.245) cai no quadrante "pouco popular e avaliação baixa", contra só 673 no quadrante oposto.
+
+## Limitações conhecidas
+
+- As medidas do dashboard assumem uma única coleta de dados (ver nota no [`CLAUDE.md`](CLAUDE.md) sobre isso).
+- `rank` e `popularity` (colunas de ranking da AniList) ficam nulos em ~80% dos registros — a API só atribui esses rankings "all-time" a uma fração dos títulos.
+- 161 animes (3,7%) não têm estúdio de animação confirmado pela AniList e não aparecem em filtros por Estúdio; 9 animes não têm gênero listado.
