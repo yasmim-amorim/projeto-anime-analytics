@@ -68,10 +68,3 @@ Requer `.env` local com `DATABASE_URL` (ver `.env.example`) e banco `anime_analy
 ## Estado atual
 
 Projeto completo e publicado: coleta (4.378 animes, 376 estúdios, 17 gêneros), tratamento, carga no Postgres, camada analítica em SQL e dashboard no Power BI com 4 páginas (Visão Geral, Ranking, Gênero e Estúdios, Temporadas) — tudo commitado e no GitHub, com README contendo prints, insights e link de vídeo demonstrativo.
-
-Pendências conhecidas (baixa prioridade, cosméticas):
-- Eixo Y truncado no gráfico "Nota Média por Ano" (página Gênero e Estúdios) — devia começar em 0.
-- Gráfico "Favoritos" (página Ranking) está como linha; devia ser barras (dado categórico, não uma série contínua).
-- Data no rodapé dos dashboards ("Última atualização") ficou como a data de edição do Power BI, não a data real da coleta (`data/raw/anilist/2026-08-16/`) — corrigir pra 16/08/2026 quando mexer no arquivo de novo.
-
-Limitação estrutural conhecida e aceita (ver acima, "Power BI ainda não trata multi-coleta") — decisão consciente de não corrigir, já que não há plano de recoletar os dados.
